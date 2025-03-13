@@ -88,6 +88,26 @@
       <Name>Sp.WanHai.Schemas</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Map Include="Map_BulkLHDNSubmissionResp_DB.btm">
+      <TypeName>Map_BulkLHDNSubmissionResp_DB</TypeName>
+      <Namespace>Sp.WanHai.Transforms</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Content Include="Map_LHDNAPIResp_DB.xsl" />
+    <Map Include="Map_LHDNAPIResp_DB.btm">
+      <TypeName>Map_LHDNAPIResp_DB</TypeName>
+      <Namespace>Sp.WanHai.Transforms</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Map_DbResp_LHDNXML.btm">
+      <TypeName>Map_DbResp_LHDNXML</TypeName>
+      <Namespace>Sp.WanHai.Transforms</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Content Include="Map_DbResp_LHDNXML.xsl" />
+    <Content Include="Map_InvoiceFF_InsertDB.xsl" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\BizTalk\BizTalkC.targets" />
 </Project>

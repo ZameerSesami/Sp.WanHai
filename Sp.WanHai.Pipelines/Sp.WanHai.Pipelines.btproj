@@ -40,6 +40,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.BizTalk.Pipeline.Components, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Sp.WanHai.WHLArchiveMessage">
+      <HintPath>C:\Program Files (x86)\Microsoft BizTalk Server 2016\Pipeline Components\Sp.WanHai.WHLArchiveMessage.dll</HintPath>
+    </Reference>
     <Reference Include="System">
       <Name>System</Name>
     </Reference>
@@ -90,8 +93,22 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Pipeline Include="RcvWHLInvoiceFFCopy.btp">
-      <TypeName>RcvWHLInvoiceFFCopy</TypeName>
+    <Pipeline Include="SndWHLInvoiceFF.btp">
+      <TypeName>SndWHLInvoiceFF</TypeName>
+      <Namespace>Sp.WanHai.Pipelines</Namespace>
+      <SubType>Task</SubType>
+    </Pipeline>
+  </ItemGroup>
+  <ItemGroup>
+    <Pipeline Include="SndErrorLogs.btp">
+      <TypeName>SndErrorLogs</TypeName>
+      <Namespace>Sp.WanHai.Pipelines</Namespace>
+      <SubType>Task</SubType>
+    </Pipeline>
+  </ItemGroup>
+  <ItemGroup>
+    <Pipeline Include="SndWHLInvReponseFF.btp">
+      <TypeName>SndWHLInvReponseFF</TypeName>
       <Namespace>Sp.WanHai.Pipelines</Namespace>
       <SubType>Task</SubType>
     </Pipeline>

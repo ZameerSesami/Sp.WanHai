@@ -26,7 +26,7 @@ namespace Sp.WanHai.Schemas {
   <xs:element name=""InvoiceFF"">
     <xs:annotation>
       <xs:appinfo>
-        <b:recordInfo structure=""delimited"" child_delimiter_type=""hex"" child_delimiter=""0xD 0xA"" child_order=""postfix"" sequence_number=""1"" preserve_delimiter_for_empty_data=""true"" suppress_trailing_delimiters=""false"" />
+        <b:recordInfo structure=""delimited"" child_delimiter_type=""hex"" child_delimiter=""0x0A"" child_order=""postfix"" sequence_number=""1"" preserve_delimiter_for_empty_data=""true"" suppress_trailing_delimiters=""false"" />
       </xs:appinfo>
     </xs:annotation>
     <xs:complexType>
@@ -275,73 +275,87 @@ namespace Sp.WanHai.Schemas {
                   </xs:appinfo>
                 </xs:annotation>
               </xs:element>
-              <xs:element name=""UnitPrice"" type=""xs:string"">
+              <xs:element name=""Quantity"" type=""xs:string"">
                 <xs:annotation>
                   <xs:appinfo>
                     <b:fieldInfo justification=""left"" sequence_number=""4"" />
                   </xs:appinfo>
                 </xs:annotation>
               </xs:element>
-              <xs:element name=""TaxType"" type=""xs:string"">
+              <xs:element name=""UOM"" type=""xs:string"">
                 <xs:annotation>
                   <xs:appinfo>
                     <b:fieldInfo justification=""left"" sequence_number=""5"" />
                   </xs:appinfo>
                 </xs:annotation>
               </xs:element>
-              <xs:element name=""TaxRate"" type=""xs:string"">
+              <xs:element name=""UnitPrice"" type=""xs:string"">
                 <xs:annotation>
                   <xs:appinfo>
                     <b:fieldInfo justification=""left"" sequence_number=""6"" />
                   </xs:appinfo>
                 </xs:annotation>
               </xs:element>
-              <xs:element name=""TaxAmount"" type=""xs:string"">
+              <xs:element name=""TaxType"" type=""xs:string"">
                 <xs:annotation>
                   <xs:appinfo>
                     <b:fieldInfo justification=""left"" sequence_number=""7"" />
                   </xs:appinfo>
                 </xs:annotation>
               </xs:element>
-              <xs:element name=""DetailOfTaxExemption"" type=""xs:string"">
+              <xs:element name=""TaxRate"" type=""xs:string"">
                 <xs:annotation>
                   <xs:appinfo>
                     <b:fieldInfo justification=""left"" sequence_number=""8"" />
                   </xs:appinfo>
                 </xs:annotation>
               </xs:element>
-              <xs:element name=""AmtExemptedFromTax"" type=""xs:string"">
+              <xs:element name=""TaxAmount"" type=""xs:string"">
                 <xs:annotation>
                   <xs:appinfo>
                     <b:fieldInfo justification=""left"" sequence_number=""9"" />
                   </xs:appinfo>
                 </xs:annotation>
               </xs:element>
-              <xs:element name=""SubTotal"" type=""xs:string"">
+              <xs:element name=""DetailOfTaxExemption"" type=""xs:string"">
                 <xs:annotation>
                   <xs:appinfo>
                     <b:fieldInfo justification=""left"" sequence_number=""10"" />
                   </xs:appinfo>
                 </xs:annotation>
               </xs:element>
-              <xs:element name=""TotalExcludingTax"" type=""xs:string"">
+              <xs:element name=""AmtExemptedFromTax"" type=""xs:string"">
                 <xs:annotation>
                   <xs:appinfo>
                     <b:fieldInfo justification=""left"" sequence_number=""11"" />
                   </xs:appinfo>
                 </xs:annotation>
               </xs:element>
-              <xs:element name=""TotalIncludingTax"" type=""xs:string"">
+              <xs:element name=""SubTotal"" type=""xs:string"">
                 <xs:annotation>
                   <xs:appinfo>
                     <b:fieldInfo justification=""left"" sequence_number=""12"" />
                   </xs:appinfo>
                 </xs:annotation>
               </xs:element>
-              <xs:element name=""TotalPayableAmount"" type=""xs:string"">
+              <xs:element name=""TotalExcludingTax"" type=""xs:string"">
                 <xs:annotation>
                   <xs:appinfo>
                     <b:fieldInfo justification=""left"" sequence_number=""13"" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name=""TotalIncludingTax"" type=""xs:string"">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification=""left"" sequence_number=""14"" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name=""TotalPayableAmount"" type=""xs:string"">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification=""left"" sequence_number=""15"" />
                   </xs:appinfo>
                 </xs:annotation>
               </xs:element>

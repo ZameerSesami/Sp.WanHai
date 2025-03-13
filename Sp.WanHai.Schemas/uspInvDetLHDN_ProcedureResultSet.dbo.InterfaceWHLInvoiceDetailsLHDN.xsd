@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ns3="http://schemas.microsoft.com/Sql/2008/05/ProceduresResultSets/dbo/InterfaceWHLInvoiceDetailsLHDN" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/Sql/2008/05/ProceduresResultSets/dbo/InterfaceWHLInvoiceDetailsLHDN" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:appinfo>
+      <fileNameHint xmlns="http://schemas.microsoft.com/servicemodel/adapters/metadata/xsd">ProcedureResultSet.dbo.InterfaceWHLInvoiceDetailsLHDN</fileNameHint>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:complexType name="StoredProcedureResultSet0">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="DocumentID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="UBLVersionID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CustomizationID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ProfileID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="InvoiceNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="OrgEInvRefNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="IssueDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="IssueTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="InvoiceTypeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CurrencyCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SellerPartyEndPointID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SellerTIN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SellerBRN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SellerMSIC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SellerBusinessDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Seller" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SellerStreet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SellerCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SellerPostalCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SellerCountryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SellerSSTRegNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SellerTaxSchemeCompID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SellerLECompID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SellerContactPhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SellerContactEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="BuyerPartyEndPointID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="BuyerTIN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="BuyerBRN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Buyer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="BuyerStreet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="BuyerCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="BuyerPostalCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="UnNamedColumn32" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="BuyerContactPhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="BuyerContactEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="BuyerSSTRegNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="BuyerLECompID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="BuyerLECompName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TotalLineAmount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TaxExclAmount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TaxInclAmount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TotalPayableAmount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TotalTaxAmount" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StoredProcedureResultSet0" nillable="true" type="ns3:StoredProcedureResultSet0" />
+  <xs:complexType name="ArrayOfStoredProcedureResultSet0">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StoredProcedureResultSet0" type="ns3:StoredProcedureResultSet0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStoredProcedureResultSet0" nillable="true" type="ns3:ArrayOfStoredProcedureResultSet0" />
+  <xs:complexType name="StoredProcedureResultSet1">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="LineItemNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ClassificationCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ProdDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Quantity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="UOM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="UnitPrice" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TaxType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TaxRate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TaxAmount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DetailOfTaxExemption" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="AmtExemptedFromTax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SubTotal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TotalExcludingTax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TotalIncludingTax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TotalPayableAmount" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StoredProcedureResultSet1" nillable="true" type="ns3:StoredProcedureResultSet1" />
+  <xs:complexType name="ArrayOfStoredProcedureResultSet1">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StoredProcedureResultSet1" type="ns3:StoredProcedureResultSet1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStoredProcedureResultSet1" nillable="true" type="ns3:ArrayOfStoredProcedureResultSet1" />
+  <xs:complexType name="StoredProcedureResultSet2">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="CummulativeTaxType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CummulativeTaxPercent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CummulativeTaxAmount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CummulativeTaxableAmount" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StoredProcedureResultSet2" nillable="true" type="ns3:StoredProcedureResultSet2" />
+  <xs:complexType name="ArrayOfStoredProcedureResultSet2">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StoredProcedureResultSet2" type="ns3:StoredProcedureResultSet2" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStoredProcedureResultSet2" nillable="true" type="ns3:ArrayOfStoredProcedureResultSet2" />
+</xs:schema>

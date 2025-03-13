@@ -12,24 +12,25 @@ namespace Sp.WanHai.CallAPI
     [Serializable]
     public class PostPeppolXMLData
     {
-        private string UseProdAPI = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "UseProdAPI_WanHai");
-        private string APIURL_UAT = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIURL_WanHai_UAT");
-        private string APIURL_PO_UAT = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIURL_PO_WanHai_UAT");
-        private string SourceSystemID_UAT = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APISourceSystemID_WanHai_UAT");
-        private string ChannelID_UAT = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIChannelID_WanHai_UAT");
-        private string TransactionID_UAT = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APITransactionID_WanHai_UAT");
-        private string ClientID_UAT = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIClientID_WanHai_UAT");
-        private string Authorization_UAT = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIAuthorization_WanHai_UAT");
-        private string PEPPOLID_UAT = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIPEPPOLID_WanHai_UAT");
+        //UAT variables
+        private string UseProdAPI = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "UseProdAPI_Wanhai");
+        private string APIURL_UAT = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIURL_Wanhai_UAT");
+        private string APIURL_PO_UAT = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIURL_PO_Wanhai_UAT");
+        private string SourceSystemID_UAT = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APISourceSystemID_Wanhai_UAT");
+        private string ChannelID_UAT = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIChannelID_Wanhai_UAT");
+        private string TransactionID_UAT = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APITransactionID_Wanhai_UAT");
+        private string ClientID_UAT = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIClientID_Wanhai_UAT");
+        private string Authorization_UAT = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIAuthorization_Wanhai_UAT");
+        private string PEPPOLID_UAT = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIPEPPOLID_Wanhai_UAT");
         //Prod variables
-        private string APIURL_PO_PROD = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIURL_PO_WanHai_PROD");
-        private string APIURL_Prod = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIURL_WanHai_Prod");
-        private string SourceSystemID_Prod = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APISourceSystemID_WanHai_Prod");
-        private string ChannelID_Prod = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIChannelID_WanHai_Prod");
-        private string TransactionID_Prod = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APITransactionID_WanHai_Prod");
-        private string ClientID_Prod = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIClientID_WanHai_Prod");
-        private string Authorization_Prod = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIAuthorization_WanHai_Prod");
-        private string PEPPOLID_Prod = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIPEPPOLID_WanHai_Prod");
+        private string APIURL_PO_PROD = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIURL_PO_Wanhai_PROD");
+        private string APIURL_Prod = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIURL_Wanhai_Prod");
+        private string SourceSystemID_Prod = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APISourceSystemID_Wanhai_Prod");
+        private string ChannelID_Prod = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIChannelID_Wanhai_Prod");
+        private string TransactionID_Prod = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APITransactionID_Wanhai_Prod");
+        private string ClientID_Prod = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIClientID_Wanhai_Prod");
+        private string Authorization_Prod = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIAuthorization_Wanhai_Prod");
+        private string PEPPOLID_Prod = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIPEPPOLID_Wanhai_Prod");
 
         public string PostResponseData(string requestXML, string ArchivePathXML, string DocType)
         {

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ns3="http://schemas.microsoft.com/Sql/2008/05/Types/TableTypes/dbo" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/Sql/2008/05/Types/TableTypes/dbo" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:appinfo>
+      <fileNameHint xmlns="http://schemas.microsoft.com/servicemodel/adapters/metadata/xsd">TableType.dbo</fileNameHint>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:complexType name="LHDNacceptedDocsTT">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="uuid" nillable="true">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="50" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="invoiceCodeNumber" nillable="true">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="50" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LHDNacceptedDocsTT" nillable="true" type="ns3:LHDNacceptedDocsTT" />
+  <xs:complexType name="ArrayOfLHDNacceptedDocsTT">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LHDNacceptedDocsTT" type="ns3:LHDNacceptedDocsTT" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLHDNacceptedDocsTT" nillable="true" type="ns3:ArrayOfLHDNacceptedDocsTT" />
+  <xs:complexType name="LHDNrejectedDocsTT">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="invoiceCodeNumber" nillable="true">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="50" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="error" nillable="true">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="1500" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LHDNrejectedDocsTT" nillable="true" type="ns3:LHDNrejectedDocsTT" />
+  <xs:complexType name="ArrayOfLHDNrejectedDocsTT">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LHDNrejectedDocsTT" type="ns3:LHDNrejectedDocsTT" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLHDNrejectedDocsTT" nillable="true" type="ns3:ArrayOfLHDNrejectedDocsTT" />
+</xs:schema>

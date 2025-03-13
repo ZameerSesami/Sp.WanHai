@@ -219,7 +219,7 @@ namespace Sp.WanHai.Schemas {
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element minOccurs=""0"" maxOccurs=""1"" name=""PeppolPOXMLPath"" nillable=""true"">
+      <xs:element minOccurs=""0"" maxOccurs=""1"" name=""PeppolInvoiceXMLPath"" nillable=""true"">
         <xs:simpleType>
           <xs:restriction base=""xs:string"">
             <xs:maxLength value=""500"" />
@@ -305,6 +305,20 @@ namespace Sp.WanHai.Schemas {
         <xs:simpleType>
           <xs:restriction base=""xs:string"">
             <xs:maxLength value=""550"" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs=""0"" maxOccurs=""1"" name=""Quantity"" nillable=""true"">
+        <xs:simpleType>
+          <xs:restriction base=""xs:string"">
+            <xs:maxLength value=""20"" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs=""0"" maxOccurs=""1"" name=""UOM"" nillable=""true"">
+        <xs:simpleType>
+          <xs:restriction base=""xs:string"">
+            <xs:maxLength value=""20"" />
           </xs:restriction>
         </xs:simpleType>
       </xs:element>

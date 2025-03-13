@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sp.WanHai.Pipelines", "Sp.W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sp.WanHai.Transforms", "Sp.WanHai.Transforms\Sp.WanHai.Transforms.btproj", "{7A52F906-748A-44A4-8B0E-40D44E9E783A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sp.WanHai.WHLArchiveMessage", "Sp.WanHai.WHLArchiveMessage\Sp.WanHai.WHLArchiveMessage.csproj", "{AAA98C83-6AE0-4786-983F-800DDB91A3D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,10 @@ Global
 		{7A52F906-748A-44A4-8B0E-40D44E9E783A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A52F906-748A-44A4-8B0E-40D44E9E783A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7A52F906-748A-44A4-8B0E-40D44E9E783A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{AAA98C83-6AE0-4786-983F-800DDB91A3D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAA98C83-6AE0-4786-983F-800DDB91A3D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAA98C83-6AE0-4786-983F-800DDB91A3D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAA98C83-6AE0-4786-983F-800DDB91A3D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

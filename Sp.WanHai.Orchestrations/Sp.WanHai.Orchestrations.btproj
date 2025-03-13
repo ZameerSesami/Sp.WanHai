@@ -80,13 +80,21 @@
     <None Include="spwanhaikey.snk" />
   </ItemGroup>
   <ItemGroup>
-    <XLang Include="Process_WHLInvoice.odx">
+    <XLang Include="Process_WHLInvoiceFFToDB.odx">
       <TypeName>Process_WHLInvoice</TypeName>
       <Namespace>Sp.WanHai.Orchestrations</Namespace>
       <SubType>Task</SubType>
     </XLang>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Sp.WanHai.CallAPI\Sp.WanHai.CallAPI.csproj">
+      <Project>{75820636-ee29-4931-b1f5-dc652400dcac}</Project>
+      <Name>Sp.WanHai.CallAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sp.WanHai.Common\Sp.WanHai.Common.csproj">
+      <Project>{86b306ac-2117-42ee-bc68-cdc59ae5c71e}</Project>
+      <Name>Sp.WanHai.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Sp.WanHai.Pipelines\Sp.WanHai.Pipelines.btproj">
       <Project>{779f98c4-8455-4b7f-96c6-0b931f08ebfc}</Project>
       <Name>Sp.WanHai.Pipelines</Name>
@@ -95,6 +103,120 @@
       <Project>{c8f4af93-0f2a-48d5-b178-a99447309cbc}</Project>
       <Name>Sp.WanHai.Schemas</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Sp.WanHai.Transforms\Sp.WanHai.Transforms.btproj">
+      <Project>{7a52f906-748a-44a4-8b0e-40d44e9e783a}</Project>
+      <Name>Sp.WanHai.Transforms</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="Process_WHLInvoiceSESAMiAPI.odx">
+      <TypeName>Process_WHLInvoice_PeppolAPI</TypeName>
+      <Namespace>Sp.WanHai.Orchestrations</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="Map_DBResp_PeppolInvXML.btm">
+      <TypeName>Map_DBResp_PeppolInvXML</TypeName>
+      <Namespace>Sp.WanHai.Orchestrations</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="Process_WHLInvRespFF_PeppolDBUpd.odx">
+      <TypeName>Process_WHLInvRespFF_PeppolDBUpd</TypeName>
+      <Namespace>Sp.WanHai.Orchestrations</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <XLang Include="Process_WHLInvoiceRespBulkLHDNAPI.odx">
+      <TypeName>Process_WHLInvoiceResp_Bulk</TypeName>
+      <Namespace>Sp.WanHai.Orchestrations</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <XLang Include="Process_WHLInvoiceBulkLHDNAPI.odx">
+      <TypeName>Process_WHLInv_LHDNAPI_Bulk</TypeName>
+      <Namespace>Sp.WanHai.Orchestrations</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <XLang Include="Process_WHLInvoiceRespLHDNAPI.odx">
+      <TypeName>Process_WHLInvRespLHDN</TypeName>
+      <Namespace>Sp.WanHai.Orchestrations</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <XLang Include="Process_WHLInvoiceLHDNAPI.odx">
+      <SubType>Task</SubType>
+      <TypeName>Process_WHLInvoice_PeppolAPI_Copy</TypeName>
+      <Namespace>Sp.WanHai.Orchestrations</Namespace>
+    </XLang>
+    <Map Include="Map_DBResp_PeppolCNXml.btm">
+      <TypeName>Map_DBResp_PeppolCNXml</TypeName>
+      <Namespace>Sp.WanHai.Orchestrations</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Content Include="Map_DBResp_PeppolCNXml.xsl" />
+    <Map Include="Map_ValidationFailed_InvRespFF.btm">
+      <TypeName>Map_ValidationFailed_InvRespFF</TypeName>
+      <Namespace>Sp.WanHai.Orchestrations</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Map_LHDNResp_InvoiceFF.btm">
+      <TypeName>Map_LHDNResp_InvoiceFF</TypeName>
+      <Namespace>Sp.WanHai.Orchestrations</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Map_InvSingleXML_FinalBulkXML.btm">
+      <TypeName>Map_InvSingleXML_FinalBulkXML</TypeName>
+      <Namespace>Sp.WanHai.Orchestrations</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Content Include="Map_InvSingleXML_FinalBulkXML.xsl" />
+    <Map Include="Map_LHDNAPIResp_InvRespFF.btm">
+      <TypeName>Map_LHDNAPIResp_InvRespFF</TypeName>
+      <Namespace>Sp.WanHai.Orchestrations</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Content Include="Map_LHDNAPIResp_InvRespFF.xsl" />
+    <Content Include="Map_LHDNResp_InvoiceFF.xsl" />
+    <Map Include="Map_StagingDB_InvRespFF.btm">
+      <TypeName>Map_StagingDB_InvRespFF</TypeName>
+      <Namespace>Sp.WanHai.Orchestrations</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Content Include="Map_StagingDB_InvRespFF.xsl" />
+    <Content Include="Map_ValidationFailed_InvRespFF.xsl" />
+    <Content Include="Map_WHLInvoiceFF_InsertDB.xsl" />
+    <XLang Include="Process_IALInvoiceResponse.odx">
+      <TypeName>Process_IALInvoiceResponse</TypeName>
+      <Namespace>Sp.WanHai.Orchestrations</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <XLang Include="Process_IALInvoice_PeppolAPI.odx">
+      <TypeName>Process_IALInvoice_PeppolAPI</TypeName>
+      <Namespace>Sp.WanHai.Orchestrations</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <XLang Include="Process_IALInvoiceFFToDB.odx">
+      <TypeName>Process_IALInvoiceFFToDB</TypeName>
+      <Namespace>Sp.WanHai.Orchestrations</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <Map Include="Map_WHLInvoiceFF_InsertDB.btm">
+      <TypeName>Map_WHLInvoiceFF_InsertDB</TypeName>
+      <Namespace>Sp.WanHai.Orchestrations</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Map_DBResp_InvResponseFF.btm">
+      <TypeName>Map_DBResp_InvResponseFF</TypeName>
+      <Namespace>Sp.WanHai.Orchestrations</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Content Include="Map_DBResp_InvResponseFF.xsl" />
+    <Content Include="Map_DBResp_PeppolInvXML.xsl" />
+    <XLang Include="Process_WHLInvoiceRespSESAMiAPI.odx">
+      <TypeName>Process_WHLInvoiceResponse</TypeName>
+      <Namespace>Sp.WanHai.Orchestrations</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\BizTalk\BizTalkC.targets" />

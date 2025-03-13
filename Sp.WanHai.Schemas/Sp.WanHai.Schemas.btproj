@@ -73,28 +73,153 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Schema Include="uspPollWHLPeppolData_TypedPolling.InterfaceWHLPeppolDBUpdDataWHL.xsd">
+      <TypeName>uspPollWHLPeppolData_TypedPolling_InterfaceWHLPeppolDBUpdDataWHL</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspInvoiceRespBulkLHDNAPI_TypedPolling.InterfaceWHLInvoiceRespBulkLHDNAPIWHL.xsd">
+      <TypeName>uspInvoiceRespBulkLHDNAPI_TypedPolling_InterfaceWHLInvoiceRespBulkLHDNAPIWHL</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspWHLInvoiceBulkLHDNAPI_TypedPolling.InterfaceWHLInvoiceBulkLHDNAPIWHL.xsd">
+      <TypeName>uspWHLInvoiceBulkLHDNAPI_TypedPolling_InterfaceWHLInvoiceBulkLHDNAPIWHL</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspInvRespLHDNAPI_TypedPolling.InterfaceWHLInvoiceRespLHDNAPIWHL.xsd">
+      <TypeName>uspInvRespLHDNAPI_TypedPolling_InterfaceWHLInvoiceRespLHDNAPIWHL</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspInvRespSESAMiAPI_TypedPolling.InterfaceWHLInvoiceRespSESAMiAPIWHL.xsd">
+      <TypeName>uspInvRespSESAMiAPI_TypedPolling_InterfaceWHLInvoiceRespSESAMiAPIWHL</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspPollInvoiceLHDNAPI_TypedPolling.InterfaceWHLInvoiceLHDNAPIWHL.xsd">
+      <TypeName>uspPollInvoiceLHDNAPI_TypedPolling_InterfaceWHLInvoiceLHDNAPIWHL</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspPollInvSESAMiApiWHL_TypedPolling.InterfaceWHLInvoiceSESAMiAPIWHL.xsd">
+      <TypeName>uspPollInvSESAMiApiWHL_TypedPolling_InterfaceWHLInvoiceSESAMiAPIWHL</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspLHDNRespBulkUpd_ProcedureResultSet.dbo.InterfaceWHLInvLHDNRespBulkUpd.xsd">
+      <TypeName>uspLHDNRespBulkUpd_ProcedureResultSet_dbo_InterfaceWHLInvLHDNRespBulkUpd</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspLHDNRespBulkUpd_TableType.dbo.xsd">
+      <TypeName>uspLHDNRespBulkUpd_TableType_dbo</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspLHDNRespBulkUpd_TypedProcedure.dbo.xsd">
+      <TypeName>uspLHDNRespBulkUpd_TypedProcedure_dbo</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspLHDNAPIRespUpd_ProcedureResultSet.dbo.InterfaceWHLInvLHDNAPIResp.xsd">
+      <TypeName>uspLHDNAPIRespUpd_ProcedureResultSet_dbo_InterfaceWHLInvLHDNAPIResp</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspLHDNAPIRespUpd_TableType.dbo.xsd">
+      <TypeName>uspLHDNAPIRespUpd_TableType_dbo</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspLHDNAPIRespUpd_TypedProcedure.dbo.xsd">
+      <TypeName>uspLHDNAPIRespUpd_TypedProcedure_dbo</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspWHLLHDNRespUpd_TypedProcedure.dbo.xsd">
+      <TypeName>uspWHLLHDNRespUpd_TypedProcedure_dbo</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspPeppolDBInsertWHL_ProcedureResultSet.dbo.InterfaceLHDNInvRespWHL.xsd">
+      <TypeName>uspPeppolDBInsertWHL_ProcedureResultSet_dbo_InterfaceLHDNInvRespWHL</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspPeppolDBInsertWHL_TypedProcedure.dbo.xsd">
+      <TypeName>uspPeppolDBInsertWHL_TypedProcedure_dbo</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspInvDetLHDN_ProcedureResultSet.dbo.InterfaceWHLInvoiceDetailsLHDN.xsd">
+      <TypeName>uspInvDetLHDN_ProcedureResultSet_dbo_InterfaceWHLInvoiceDetailsLHDN</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspInvDetLHDN_TypedProcedure.dbo.xsd">
+      <TypeName>uspInvDetLHDN_TypedProcedure_dbo</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspPollPeppolSentIAL_TypedPolling.InterfacePeppolSentWHLInvoicesIAL.xsd">
+      <TypeName>uspPollPeppolSentIAL_TypedPolling_InterfacePeppolSentWHLInvoicesIAL</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspPollInvoicesIAL_TypedPolling.InterfaceWHLInvoicesPollingIAL.xsd">
+      <TypeName>uspPollInvoicesIAL_TypedPolling_InterfaceWHLInvoicesPollingIAL</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspWHLInvPeppolDBStatus_ProcedureResultSet.dbo.InterfaceWHLInvoiceStatus.xsd">
+      <TypeName>uspWHLInvPeppolDBStatus_ProcedureResultSet_dbo_InterfaceWHLInvoiceStatus</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspWHLInvPeppolDBStatus_TypedProcedure.dbo.xsd">
+      <TypeName>uspWHLInvPeppolDBStatus_TypedProcedure_dbo</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="WHLInvoiceResponseFF.xsd">
+      <TypeName>WHLInvoiceResponseFF</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspErrorLogs_TypedProcedure.dbo.xsd">
+      <TypeName>uspErrorLogs_TypedProcedure_dbo</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="SSOValues.xsd">
+      <TypeName>SSOValues</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspInvStatusUpd_TypedProcedure.dbo.xsd">
+      <TypeName>uspInvStatusUpd_TypedProcedure_dbo</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspInvDetails_ProcedureResultSet.dbo.InterfaceWHLInvoiceDetails.xsd">
+      <TypeName>uspInvDetails_ProcedureResultSet_dbo_InterfaceWHLInvoiceDetails</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspInvDetails_TypedProcedure.dbo.xsd">
+      <TypeName>uspInvDetails_TypedProcedure_dbo</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
     <Schema Include="InvoiceFFCopy.xsd">
       <TypeName>InvoiceFFCopy</TypeName>
       <Namespace>Sp.WanHai.Schemas</Namespace>
       <SubType>Task</SubType>
     </Schema>
-    <Schema Include="TestingMain.xsd">
-      <TypeName>TestingMain</TypeName>
-      <Namespace>Sp.WanHai.Schemas</Namespace>
-      <SubType>Task</SubType>
-    </Schema>
-    <Schema Include="Testing.xsd">
-      <TypeName>Testing</TypeName>
-      <Namespace>Sp.WanHai.Schemas</Namespace>
-      <SubType>Task</SubType>
-    </Schema>
     <Schema Include="InvoiceSingleFF.xsd">
       <TypeName>InvoiceSingleFF</TypeName>
-      <Namespace>Sp.WanHai.Schemas</Namespace>
-      <SubType>Task</SubType>
-    </Schema>
-    <Schema Include="InvoiceFFSingle.xsd">
-      <TypeName>InvoiceFFSingle</TypeName>
       <Namespace>Sp.WanHai.Schemas</Namespace>
       <SubType>Task</SubType>
     </Schema>
@@ -123,10 +248,93 @@
       <Namespace>Sp.WanHai.Schemas</Namespace>
       <SubType>Task</SubType>
     </Schema>
+    <Schema Include="InvoiceItemDebatch.xsd">
+      <TypeName>InvoiceItemDebatch</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="PeppolInvoice.xsd">
+      <TypeName>PeppolInvoice</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="PeppolInvoice1.xsd">
+      <TypeName>PeppolInvoice1</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="PeppolInvoice2.xsd">
+      <TypeName>PeppolInvoice2</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="PeppolAPIResponse.xsd">
+      <TypeName>PeppolAPIResponse</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="PeppolCreditNote.xsd">
+      <TypeName>PeppolCreditNote</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="PeppolCreditNote1.xsd">
+      <TypeName>PeppolCreditNote1</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="PeppolCreditNote2.xsd">
+      <TypeName>PeppolCreditNote2</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="LHDNInvoice.xsd">
+      <TypeName>LHDNInvoice</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="LHDNInvoice1.xsd">
+      <TypeName>LHDNInvoice1</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="LHDNInvoice2.xsd">
+      <TypeName>LHDNInvoice2</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="LHDNInvoiceAPIDetailsResp.xsd">
+      <TypeName>LHDNInvoiceAPIDetailsResp</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="LHDNAPIResponse.xsd">
+      <TypeName>LHDNAPIResponse</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="LHDNSubmissionResp.xsd">
+      <TypeName>LHDNSubmissionResp</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="LHDNAPISubmissionResponse.xsd">
+      <TypeName>LHDNAPISubmissionResponse</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
     <None Include="spwanhaikey.snk" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="WcfReceivePort_SqlAdapterBinding_Custom.bindinginfo.xml" />
+    <Content Include="WcfReceivePort_SqlAdapterBinding_Custom.bindinginfo7.xml" />
+    <Content Include="WcfReceivePort_SqlAdapterBinding_Custom.bindinginfo8.xml" />
+    <Content Include="WcfReceivePort_SqlAdapterBinding_Custom.bindinginfo9.xml" />
     <Content Include="WcfSendPort_SqlAdapterBinding_Custom.bindinginfo.xml" />
+    <Content Include="WcfSendPort_SqlAdapterBinding_Custom.bindinginfo1.xml" />
+    <Content Include="WcfSendPort_SqlAdapterBinding_Custom.bindinginfo2.xml" />
+    <Content Include="WcfSendPort_SqlAdapterBinding_Custom.bindinginfo3.xml" />
+    <Content Include="WcfSendPort_SqlAdapterBinding_Custom.bindinginfo4.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\BizTalk\BizTalkC.targets" />

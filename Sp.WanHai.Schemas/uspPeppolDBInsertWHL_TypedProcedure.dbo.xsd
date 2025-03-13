@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ns3="http://schemas.microsoft.com/Sql/2008/05/ProceduresResultSets/dbo/InterfaceLHDNInvRespWHL" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/dbo" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation=".\uspPeppolDBInsertWHL_ProcedureResultSet.dbo.InterfaceLHDNInvRespWHL.xsd" namespace="http://schemas.microsoft.com/Sql/2008/05/ProceduresResultSets/dbo/InterfaceLHDNInvRespWHL" />
+  <xs:annotation>
+    <xs:appinfo>
+      <fileNameHint xmlns="http://schemas.microsoft.com/servicemodel/adapters/metadata/xsd">TypedProcedure.dbo</fileNameHint>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="InterfaceLHDNInvRespWHL">
+    <xs:annotation>
+      <xs:documentation>
+        <doc:action xmlns:doc="http://schemas.microsoft.com/servicemodel/adapters/metadata/documentation">TypedProcedure/dbo/InterfaceLHDNInvRespWHL</doc:action>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="DocumentID" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="100" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="InvoiceNumber" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="OrgEInvRefNo" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="IssueDate" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="InvoiceTypeCode" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="CurrencyCode" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="SellerTIN" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="SellerBRN" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="SellerMSIC" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="SellerName" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="SellerStreet" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="SellerCity" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="SellerPostalCode" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="SellerCountryCode" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="SellerSSTRegNo" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="SellerContactPhone" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="SellerContactEmail" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="BuyerTIN" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="BuyerBRN" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="BuyerName" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="BuyerStreet" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="BuyerCity" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="BuyerPostalCode" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="BuyerCountry" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="BuyerSSTRegNo" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="BuyerContactPhone" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="BuyerContactEmail" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="LinExtensionAmount" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="TaxExclusiveAmount" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="TaxInclusiveAmount" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="PayableAmount" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="SubmissionID" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="LHDNStatus" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="LHDNUUID" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="LHDNLongID" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="LHDNDate" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="LHDNMessage" nillable="true">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InterfaceLHDNInvRespWHLResponse">
+    <xs:annotation>
+      <xs:documentation>
+        <doc:action xmlns:doc="http://schemas.microsoft.com/servicemodel/adapters/metadata/documentation">TypedProcedure/dbo/InterfaceLHDNInvRespWHL/response</doc:action>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="StoredProcedureResultSet0" nillable="true" type="ns3:ArrayOfStoredProcedureResultSet0" />
+        <xs:element minOccurs="1" maxOccurs="1" name="ReturnValue" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -26,7 +26,7 @@ namespace Sp.WanHai.Schemas {
   <xs:element name=""Root"">
     <xs:annotation>
       <xs:appinfo>
-        <b:recordInfo structure=""delimited"" child_delimiter_type=""hex"" child_delimiter=""0xD 0xA"" sequence_number=""1"" preserve_delimiter_for_empty_data=""true"" suppress_trailing_delimiters=""false"" child_order=""postfix"" />
+        <b:recordInfo structure=""delimited"" child_delimiter_type=""hex"" child_delimiter=""0x0A"" sequence_number=""1"" preserve_delimiter_for_empty_data=""true"" suppress_trailing_delimiters=""false"" child_order=""postfix"" />
       </xs:appinfo>
     </xs:annotation>
     <xs:complexType>
