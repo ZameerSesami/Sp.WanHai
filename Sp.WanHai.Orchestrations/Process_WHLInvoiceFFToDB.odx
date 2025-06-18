@@ -245,18 +245,18 @@
                         <om:Property Name="Name" Value="ex" />
                         <om:Property Name="Signal" Value="True" />
                         <om:Element Type="VariableAssignment" OID="82e7d43b-5abf-4871-86fa-16824517f164" ParentLink="Catch_Statement" LowerBound="107.1" HigherBound="109.1">
-                            <om:Property Name="Expression" Value="System.Diagnostics.EventLog.WriteEntry(&quot;Exception&quot;,ex.Message);" />
+                            <om:Property Name="Expression" Value="System.Diagnostics.EventLog.WriteEntry(&quot;WHLInvoiceFFtoDBException&quot;,ex.Message);" />
                             <om:Property Name="ReportToAnalyst" Value="True" />
                             <om:Property Name="Name" Value="Expression_1" />
-                            <om:Property Name="Signal" Value="True" />
+                            <om:Property Name="Signal" Value="False" />
                         </om:Element>
                     </om:Element>
                 </om:Element>
                 <om:Element Type="VariableAssignment" OID="8b2d1f07-5dfe-4e37-9ebd-a8dcb41a69e8" ParentLink="ServiceBody_Statement" LowerBound="112.1" HigherBound="114.1">
-                    <om:Property Name="Expression" Value="System.Diagnostics.EventLog.WriteEntry(&quot;WHL InvoiceFF Process End&quot;,&quot;WHL InvoiceFF Process Completed&quot;);" />
+                    <om:Property Name="Expression" Value="System.Diagnostics.EventLog.WriteEntry(&quot;WHL InvoiceFF_DB Process End&quot;,&quot;WHL InvoiceFF_DB Process Completed&quot;);" />
                     <om:Property Name="ReportToAnalyst" Value="True" />
                     <om:Property Name="Name" Value="Process_End" />
-                    <om:Property Name="Signal" Value="False" />
+                    <om:Property Name="Signal" Value="True" />
                 </om:Element>
             </om:Element>
             <om:Element Type="PortDeclaration" OID="2de59fd9-cf1b-42ca-ba3f-4a01455af967" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="21.1" HigherBound="23.1">
@@ -402,12 +402,12 @@ module Sp.WanHai.Orchestrations
                     catch (System.Exception ex)
                     {
                         [Microsoft.XLANGs.BaseTypes.DesignerPosition("82e7d43b-5abf-4871-86fa-16824517f164")]
-                        System.Diagnostics.EventLog.WriteEntry("Exception",ex.Message);
+                        System.Diagnostics.EventLog.WriteEntry("WHLInvoiceFFtoDBException",ex.Message);
                     }
                 }
             }
             [Microsoft.XLANGs.BaseTypes.DesignerPosition("8b2d1f07-5dfe-4e37-9ebd-a8dcb41a69e8")]
-            System.Diagnostics.EventLog.WriteEntry("WHL InvoiceFF Process End","WHL InvoiceFF Process Completed");
+            System.Diagnostics.EventLog.WriteEntry("WHL InvoiceFF_DB Process End","WHL InvoiceFF_DB Process Completed");
         }
     }
 }

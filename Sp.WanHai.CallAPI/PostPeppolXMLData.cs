@@ -22,6 +22,7 @@ namespace Sp.WanHai.CallAPI
         private string ClientID_UAT = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIClientID_Wanhai_UAT");
         private string Authorization_UAT = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIAuthorization_Wanhai_UAT");
         private string PEPPOLID_UAT = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIPEPPOLID_Wanhai_UAT");
+
         //Prod variables
         private string APIURL_PO_PROD = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIURL_PO_Wanhai_PROD");
         private string APIURL_Prod = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIURL_Wanhai_Prod");
@@ -36,6 +37,20 @@ namespace Sp.WanHai.CallAPI
         {
             try
             {
+                if (ArchivePathXML == "IAL")
+                {
+                    ChannelID_Prod = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIChannelID_IAL_Prod");
+                    TransactionID_Prod = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APITransactionID_IAL_Prod");
+                    ClientID_Prod = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIClientID_IAL_Prod");
+                    Authorization_Prod = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIAuthorization_IAL_Prod");
+                    PEPPOLID_Prod = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIPEPPOLID_IAL_Prod");
+
+                    ChannelID_UAT = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIChannelID_IAL_UAT");
+                    TransactionID_UAT = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APITransactionID_IAL_UAT");
+                    ClientID_UAT = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIClientID_IAL_UAT");
+                    Authorization_UAT = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIAuthorization_IAL_UAT");
+                    PEPPOLID_UAT = Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "APIPEPPOLID_IAL_UAT");
+                }
                 var apiresp = ProcessResponseData(requestXML, ArchivePathXML, DocType);
                 return apiresp;
             }

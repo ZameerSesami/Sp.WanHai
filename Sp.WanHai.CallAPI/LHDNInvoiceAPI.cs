@@ -26,16 +26,26 @@ namespace Sp.WanHai.CallAPI
         private string LHDNInvSubmissionDetURL = Sp.WanHai.Common.SSOClientHelper.Read("Sp.Wanhai", "LHDNInvSubmissionDetURL");
         private string grant_type = Sp.WanHai.Common.SSOClientHelper.Read("Sp.Wanhai", "grant_type");
         private string client_id = Sp.WanHai.Common.SSOClientHelper.Read("Sp.Wanhai", "client_id");
+        private string client_id_Prod = Sp.WanHai.Common.SSOClientHelper.Read("Sp.Wanhai", "client_id_Prod");
         private string client_secret = Sp.WanHai.Common.SSOClientHelper.Read("Sp.Wanhai", "client_secret");
+        private string client_secret_Prod = Sp.WanHai.Common.SSOClientHelper.Read("Sp.Wanhai", "client_secret_Prod");
         private string scope = Sp.WanHai.Common.SSOClientHelper.Read("Sp.Wanhai", "scope");
+        private string UseProdAPI = Sp.WanHai.Common.SSOClientHelper.Read("Sp.Wanhai", "UseProdAPI_Wanhai");
 
         public string SubmitLHDNInvoice(string InvoiceNo, string SupplierTIN, string InvoiceXMLreq, string APIType, string UUID)
         {
-            string strtoken = "";
+            //string strtoken = "";
             try
             {
+                if (UseProdAPI == "Yes")
+                {
+                    LHDNAPITokenURL = Sp.WanHai.Common.SSOClientHelper.Read("Sp.Wanhai", "LHDNAPITokenURL_Prod");
+                    LHDNInvSubmitURL = Sp.WanHai.Common.SSOClientHelper.Read("Sp.Wanhai", "LHDNInvSubmitURL_Prod");
+                    LHDNInvDetailsURL = Sp.WanHai.Common.SSOClientHelper.Read("Sp.Wanhai", "LHDNInvDetailsURL_Prod");
+                    LHDNInvSubmissionDetURL = Sp.WanHai.Common.SSOClientHelper.Read("Sp.Wanhai", "LHDNInvSubmissionDetURL_Prod");
+                }
                 var token = GetLHDNToken(SupplierTIN);
-                strtoken = token.access_token;
+                //strtoken = token.access_token;
                 if (APIType == "Submit")
                 {
                     var apiresp = ProcessLHDNData(token.access_token, SupplierTIN, InvoiceNo, InvoiceXMLreq);
@@ -43,19 +53,19 @@ namespace Sp.WanHai.CallAPI
                 }
                 else if (APIType == "SubmissionID")
                 {
-                    var apiresp = GetSubmissionData(token.access_token, SupplierTIN, InvoiceNo,"");
+                    var apiresp = GetSubmissionData(token.access_token, SupplierTIN, InvoiceNo, UUID);
                     return apiresp;
                 }
                 else
                 {
-                    var Invresp = GetLHDNInvoiceDetails(strtoken, SupplierTIN, InvoiceNo, UUID);
+                    var Invresp = GetLHDNInvoiceDetails(token.access_token, SupplierTIN, InvoiceNo, UUID);
                     return Invresp;
                 }
                 //return "OK" + token;
             }
             catch (Exception ex)
             {
-                return "Error:" + ex.Message + "Token: " + strtoken;
+                return "Error:" + ex.Message;
             }
         }
         public string SubmitLHDNInvoiceBulk(string InvoiceRefNo, string SupplierTIN, string InvoiceBulkXML, string APIType, string UUID)
@@ -63,6 +73,21 @@ namespace Sp.WanHai.CallAPI
             string strtoken = "";
             try
             {
+                if (UseProdAPI == "Yes")
+                {
+                    LHDNAPITokenURL = Sp.WanHai.Common.SSOClientHelper.Read("Sp.Wanhai", "LHDNAPITokenURL_Prod");
+                    LHDNInvSubmitURL = Sp.WanHai.Common.SSOClientHelper.Read("Sp.Wanhai", "LHDNInvSubmitURL_Prod");
+                    LHDNInvDetailsURL = Sp.WanHai.Common.SSOClientHelper.Read("Sp.Wanhai", "LHDNInvDetailsURL_Prod");
+                    LHDNInvSubmissionDetURL = Sp.WanHai.Common.SSOClientHelper.Read("Sp.Wanhai", "LHDNInvSubmissionDetURL_Prod");
+                }
+                if (InvoiceRefNo == "IAL")
+                {
+                    client_id = Sp.WanHai.Common.SSOClientHelper.Read("Sp.Wanhai", "client_id_IAL");
+                    client_id_Prod = Sp.WanHai.Common.SSOClientHelper.Read("Sp.Wanhai", "client_id_Prod_IAL");
+                    client_secret = Sp.WanHai.Common.SSOClientHelper.Read("Sp.Wanhai", "client_secret_IAL");
+                    client_secret_Prod = Sp.WanHai.Common.SSOClientHelper.Read("Sp.Wanhai", "client_secret_Prod_IAL");
+                }
+
                 var token = GetLHDNToken(SupplierTIN);
                 strtoken = token.access_token;
                 if (APIType == "Submit")
@@ -185,10 +210,11 @@ namespace Sp.WanHai.CallAPI
             LHDNSubmissionResponse invoiceDetails = new LHDNSubmissionResponse();
             string longID = string.Empty;
             string errorMessage = string.Empty;
+            string url = string.Empty;
             try
             {
                 // Append path variable to the URL
-                string url = LHDNInvSubmissionDetURL + "/" + SubmissionID + "/";
+                url = @LHDNInvSubmissionDetURL + "/" + SubmissionID;
 
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3;
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
@@ -221,10 +247,17 @@ namespace Sp.WanHai.CallAPI
                             sb.Append("<uuid>" + item.uuid + "</uuid>");
                             sb.Append("<submissionUid>" + item.submissionUid + "</submissionUid>");
                             sb.Append("<longId>" + item.longId + "</longId>");
-                            sb.Append("<internalId>" + item.uuid + "</internalId>");
+                            sb.Append("<internalId>" + item.internalId + "</internalId>");
                             sb.Append("<dateTimeValidated>" + item.dateTimeValidated.ToString() + "</dateTimeValidated>");
-                            sb.Append("<status>" + item.uuid + "</status>");
-                            sb.Append("<documentStatusReason>" + item.documentStatusReason + "</documentStatusReason>");
+                            sb.Append("<status>" + item.status + "</status>");
+                            if (item.status == "Invalid")
+                            {
+                                sb.Append("<documentStatusReason>" + GetLHDNInvoiceDetailsfromUUID(LHDNToken, SupplierTIN, InvoiceNo, item.uuid) + "</documentStatusReason>");
+                            }
+                            else
+                            {
+                                sb.Append("<documentStatusReason>" + item.documentStatusReason + "</documentStatusReason>");
+                            }
                             sb.Append("</SubmissionResponses>");
                         }
                         sb.Append("</APISubmissionResponse>");
@@ -233,7 +266,7 @@ namespace Sp.WanHai.CallAPI
                     else
                     {
                         errorMessage = "HTTP Status Code : " + (int)response.StatusCode + ", Reason Phrase: " + response.ReasonPhrase;
-                        return "Error: " + errorMessage;
+                        return "Error: " + url + errorMessage;
                     }
                     //return invoiceDetails;
                 }
@@ -241,13 +274,14 @@ namespace Sp.WanHai.CallAPI
             catch (Exception ex)
             {
                 errorMessage = ex.Message;
-                return "Error: " + errorMessage;
+                return "Error: " + url + errorMessage;
             }
         }
 
         public string ProcessLHDNDataBulk(string LHDNToken, string SupplierTIN, string InvoiceNo, string InvoiceXMLreq)
         {
             string lineno = "1";
+            string InternalDocIdcount = "NA";
             try
             {
                 LHDNInvoiceRequestModel req = new LHDNInvoiceRequestModel();
@@ -263,13 +297,16 @@ namespace Sp.WanHai.CallAPI
                     XmlDocument xd = new XmlDocument();
                     xd.LoadXml(SingleInvoiceXML);
                     XmlNodeList elemList = xd.GetElementsByTagName("InternalDocID");
+
+                    InternalDocIdcount = elemList.Count.ToString();
+
                     if (elemList.Count > 0)
                     {
                         InvoiceNo = elemList[0].InnerXml;
                     }
                     //remove InternalDocID added for reference purpose
                     //remove spaces, line breaks and tabspaces
-                    SingleInvoiceXML = SingleInvoiceXML.Replace("<InternalDocID>" + InvoiceNo + "</InternalDocID>","").Replace("\r\n", "").Replace("\n", "").Replace("\t", "");
+                    SingleInvoiceXML = SingleInvoiceXML.Replace("<InternalDocID>" + InvoiceNo + "</InternalDocID>", "").Replace("\r\n", "").Replace("\n", "").Replace("\t", "");
                     SingleInvoiceXML = System.Text.RegularExpressions.Regex.Replace(SingleInvoiceXML, @">\s+<", "><");
 
                     byte[] bytes = System.Text.Encoding.UTF8.GetBytes(SingleInvoiceXML);
@@ -417,14 +454,42 @@ namespace Sp.WanHai.CallAPI
                     if (response.IsSuccessStatusCode)
                     {
                         invoiceDetails = JsonConvert.DeserializeObject<LHDNInvoiceDetails>(result);
-                        if (invoiceDetails.status == "Valid")
+                        System.Text.StringBuilder sb = new System.Text.StringBuilder();
+                        sb.Append("<APISubmissionResponse>");
+                        sb.Append("<SubmissionResponses>");
+                        sb.Append("<uuid>" + invoiceDetails.uuid + "</uuid>");
+                        sb.Append("<submissionUid>" + invoiceDetails.submissionUid + "</submissionUid>");
+                        sb.Append("<longId>" + invoiceDetails.longId + "</longId>");
+                        sb.Append("<internalId>" + invoiceDetails.internalId + "</internalId>");
+                        sb.Append("<dateTimeValidated>" + invoiceDetails.dateTimeValidated.ToString() + "</dateTimeValidated>");
+                        sb.Append("<status>" + invoiceDetails.status + "</status>");
+                        sb.Append("<documentStatusReason>");
+                        foreach (var item in invoiceDetails.validationResults.validationSteps)
                         {
-                            return "<APIResponse><InvoiceNumber>" + InvoiceNo + "</InvoiceNumber><UUID>" + UUID + "</UUID><LongID>" + invoiceDetails.longId + "</LongID><StatusCode>Valid</StatusCode><StatusMessage>-</StatusMessage><ValidationDateTime>" + invoiceDetails.dateTimeValidated.ToString() + "</ValidationDateTime><InterfaceStatus>Valid</InterfaceStatus><LHDNResponse>" + result.ToString().Replace("\\n", "").Replace("\\", "").Replace("&", "&amp;").Replace("'", "`").Replace(",", "-") + "</LHDNResponse></APIResponse>";
+                            if (item.status == "Invalid")
+                            {
+                                //sb.Append(item.error.ToString().Substring(0,999));
+                                //sb.Append("<documentStatusReason>" + JsonConvert.DeserializeObject<ErrorDetail>(item.error.error) + "</documentStatusReason>");
+                                sb.Append(item.error.error + " - ");
+                                sb.Append(item.error.innerError[0].propertyName);
+                            }
                         }
-                        else
-                        {
-                            return "<APIResponse><InvoiceNumber>" + InvoiceNo + "</InvoiceNumber><UUID>" + UUID + "</UUID><LongID>" + invoiceDetails.longId + "</LongID><StatusCode>Invalid</StatusCode><StatusMessage>" + result.ToString().Replace("\\n", "").Replace("\\", "").Replace("&", "&amp;").Replace("'", "`").Replace(",", "-") + "</StatusMessage><ValidationDateTime>" + invoiceDetails.dateTimeValidated.ToString() + "</ValidationDateTime><InterfaceStatus>Invalid</InterfaceStatus><LHDNResponse>" + result.ToString().Replace("\\n", "").Replace("\\", "").Replace("&", "&amp;").Replace("'", "`").Replace(",", "-") + "</LHDNResponse></APIResponse>";
-                        }
+                        //sb.Append(result.ToString().Replace("\\n", "").Replace("\\", "").Replace("&", "&amp;").Replace("'", "`").Replace(",", "-").Substring(0,999));
+                        sb.Append("</documentStatusReason>");
+                        sb.Append("</SubmissionResponses>");
+
+                        sb.Append("</APISubmissionResponse>");
+                        return sb.ToString();
+
+
+                        //if (invoiceDetails.status == "Valid")
+                        //{
+                        //    return "<APIResponse><InvoiceNumber>" + InvoiceNo + "</InvoiceNumber><UUID>" + UUID + "</UUID><LongID>" + invoiceDetails.longId + "</LongID><StatusCode>Valid</StatusCode><StatusMessage>-</StatusMessage><ValidationDateTime>" + invoiceDetails.dateTimeValidated.ToString() + "</ValidationDateTime><InterfaceStatus>Valid</InterfaceStatus><LHDNResponse>" + result.ToString().Replace("\\n", "").Replace("\\", "").Replace("&", "&amp;").Replace("'", "`").Replace(",", "-") + "</LHDNResponse></APIResponse>";
+                        //}
+                        //else
+                        //{
+                        //    return "<APIResponse><InvoiceNumber>" + InvoiceNo + "</InvoiceNumber><UUID>" + UUID + "</UUID><LongID>" + invoiceDetails.longId + "</LongID><StatusCode>Invalid</StatusCode><StatusMessage>" + result.ToString().Replace("\\n", "").Replace("\\", "").Replace("&", "&amp;").Replace("'", "`").Replace(",", "-") + "</StatusMessage><ValidationDateTime>" + invoiceDetails.dateTimeValidated.ToString() + "</ValidationDateTime><InterfaceStatus>Invalid</InterfaceStatus><LHDNResponse>" + result.ToString().Replace("\\n", "").Replace("\\", "").Replace("&", "&amp;").Replace("'", "`").Replace(",", "-") + "</LHDNResponse></APIResponse>";
+                        //}
                         //if (string.IsNullOrEmpty(invoiceDetails.longId) && invoiceDetails.status == "Invalid")
                         //{
                         //    string replaceData = result.ToString();
@@ -457,9 +522,62 @@ namespace Sp.WanHai.CallAPI
                     else
                     {
                         errorMessage = "HTTP Status Code : " + (int)response.StatusCode + ", Reason Phrase: " + response.ReasonPhrase;
-                        return "<APIResponse><UUID>" + UUID + "</UUID><LongID>" + invoiceDetails.longId + "</LongID><StatusCode>Error</StatusCode><StatusMessage>" + errorMessage + "</StatusMessage><InterfaceStatus>Invalid</InterfaceStatus><LHDNResponse>" + errorMessage + "</LHDNResponse></APIResponse>";
+                        return "<APISubmissionResponse><SubmissionResponses><uuid>" + UUID + "</uuid><submissionUid></submissionUid><longId>" + invoiceDetails.longId + "</longId><internalId>" + InvoiceNo + "<internalId><dateTimeValidated>" + System.DateTime.Now.ToString() + "</dateTimeValidated><status>Error</status><documentStatusReason>" + errorMessage + "</documentStatusReason></SubmissionResponses></APISubmissionResponse>";
                     }
                     //return invoiceDetails;
+                }
+            }
+            catch (Exception ex)
+            {
+                errorMessage = ex.Message;
+                return errorMessage;
+            }
+        }
+
+        public string GetLHDNInvoiceDetailsfromUUID(string LHDNToken, string SupplierTIN, string InvoiceNo, string UUID)
+        {
+            LHDNInvoiceDetails invoiceDetails = new LHDNInvoiceDetails();
+            string longID = string.Empty;
+            string errorMessage = string.Empty;
+            try
+            {
+                // Append path variable to the URL
+                string url = LHDNInvDetailsURL + "/" + UUID + "/details";
+
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3;
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
+                ServicePointManager.ServerCertificateValidationCallback = (snder, cert, chain, error) => true;
+
+                HttpClientHandler handler = new HttpClientHandler();
+                using (var httpClient = new HttpClient(handler))
+                {
+                    // Configure the client with your DS certificate for client authentication    
+                    httpClient.BaseAddress = new Uri(url);
+                    httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer " + LHDNToken);
+                    //httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", "F3E7DB5C-D57C-4103-8B46-99AF3E8267CE");// Set the value of authorization header for HTTP Request.
+                    httpClient.Timeout = TimeSpan.FromSeconds(300);
+                    // Send the POST request to obtain the access token
+                    HttpResponseMessage response = httpClient.GetAsync(url).Result;
+                    var result = response.Content.ReadAsStringAsync().Result;
+                    if (response.IsSuccessStatusCode)
+                    {
+                        invoiceDetails = JsonConvert.DeserializeObject<LHDNInvoiceDetails>(result);
+                        System.Text.StringBuilder sb = new System.Text.StringBuilder();
+                        foreach (var item in invoiceDetails.validationResults.validationSteps)
+                        {
+                            if (item.status == "Invalid")
+                            {
+                                sb.Append(item.error.error + " - ");
+                                sb.Append(item.error.innerError[0].propertyName);
+                            }
+                        }
+                        return sb.ToString();
+                    }
+                    else
+                    {
+                        errorMessage = "HTTP Status Code : " + (int)response.StatusCode + ", Reason Phrase: " + response.ReasonPhrase;
+                        return errorMessage;
+                    }
                 }
             }
             catch (Exception ex)
@@ -475,15 +593,25 @@ namespace Sp.WanHai.CallAPI
             using (var client = new HttpClient())
             {
                 var headerreq = new List<KeyValuePair<string, string>>();
-                headerreq.Add(new KeyValuePair<string, string>("grant_type", grant_type));
-                headerreq.Add(new KeyValuePair<string, string>("client_id", client_id));
-                headerreq.Add(new KeyValuePair<string, string>("client_secret", client_secret));
-                headerreq.Add(new KeyValuePair<string, string>("scope", scope));
+                if (UseProdAPI == "Yes")
+                {
+                    headerreq.Add(new KeyValuePair<string, string>("grant_type", grant_type));
+                    headerreq.Add(new KeyValuePair<string, string>("client_id", client_id_Prod));
+                    headerreq.Add(new KeyValuePair<string, string>("client_secret", client_secret_Prod));
+                    headerreq.Add(new KeyValuePair<string, string>("scope", scope));
+                }
+                else
+                {
+                    headerreq.Add(new KeyValuePair<string, string>("grant_type", grant_type));
+                    headerreq.Add(new KeyValuePair<string, string>("client_id", client_id));
+                    headerreq.Add(new KeyValuePair<string, string>("client_secret", client_secret));
+                    headerreq.Add(new KeyValuePair<string, string>("scope", scope));
+                }
+
 
                 HttpContent content = new FormUrlEncodedContent(headerreq);
                 content.Headers.ContentType = new MediaTypeHeaderValue("application/x-www-form-urlencoded");
                 //System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
-
                 client.BaseAddress = new Uri(LHDNAPITokenURL);
                 client.DefaultRequestHeaders.Add("onbehalfof", SupplierTIN);
 

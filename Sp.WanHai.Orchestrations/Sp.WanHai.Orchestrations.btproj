@@ -123,7 +123,37 @@
     </Map>
   </ItemGroup>
   <ItemGroup>
-    <XLang Include="Process_WHLInvRespFF_PeppolDBUpd.odx">
+    <XLang Include="Process_WHLInvoiceResponseUUID.odx">
+      <TypeName>Process_WHLInvoiceResponseUUID</TypeName>
+      <Namespace>Sp.WanHai.Orchestrations</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <XLang Include="Process_IALInvoiceRespBulkLHDNAPI.odx">
+      <TypeName>Process_IALInvoiceRespBulkLHDNAPI</TypeName>
+      <Namespace>Sp.WanHai.Orchestrations</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <XLang Include="Process_IALInvoiceBulkLHDNAPI.odx">
+      <TypeName>Process_IALInvoiceBulkLHDNAPI</TypeName>
+      <Namespace>Sp.WanHai.Orchestrations</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <XLang Include="Process_IALInvoiceResponseFF.odx">
+      <TypeName>Process_IALInvoiceResponseFF</TypeName>
+      <Namespace>Sp.WanHai.Orchestrations</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <XLang Include="Process_IALInvoiceRespSESAMiAPI.odx">
+      <TypeName>Process_IALInvoiceRespSESAMiAPI</TypeName>
+      <Namespace>Sp.WanHai.Orchestrations</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <XLang Include="Process_WHLInvoiceResponseFF.odx">
+      <TypeName>Process_WHLInvoiceResponseFF</TypeName>
+      <Namespace>Sp.WanHai.Orchestrations</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <XLang Include="Process_WHLInvRespPeppolDBUpd.odx">
       <TypeName>Process_WHLInvRespFF_PeppolDBUpd</TypeName>
       <Namespace>Sp.WanHai.Orchestrations</Namespace>
       <SubType>Task</SubType>
@@ -138,27 +168,24 @@
       <Namespace>Sp.WanHai.Orchestrations</Namespace>
       <SubType>Task</SubType>
     </XLang>
-    <XLang Include="Process_WHLInvoiceRespLHDNAPI.odx">
-      <TypeName>Process_WHLInvRespLHDN</TypeName>
-      <Namespace>Sp.WanHai.Orchestrations</Namespace>
-      <SubType>Task</SubType>
-    </XLang>
-    <XLang Include="Process_WHLInvoiceLHDNAPI.odx">
-      <SubType>Task</SubType>
-      <TypeName>Process_WHLInvoice_PeppolAPI_Copy</TypeName>
-      <Namespace>Sp.WanHai.Orchestrations</Namespace>
-    </XLang>
     <Map Include="Map_DBResp_PeppolCNXml.btm">
       <TypeName>Map_DBResp_PeppolCNXml</TypeName>
       <Namespace>Sp.WanHai.Orchestrations</Namespace>
       <SubType>Task</SubType>
     </Map>
-    <Content Include="Map_DBResp_PeppolCNXml.xsl" />
-    <Map Include="Map_ValidationFailed_InvRespFF.btm">
-      <TypeName>Map_ValidationFailed_InvRespFF</TypeName>
+    <Map Include="Map_DBResp_InvoiceRespFF.btm">
+      <TypeName>Map_DBResp_InvoiceRespFF</TypeName>
       <Namespace>Sp.WanHai.Orchestrations</Namespace>
       <SubType>Task</SubType>
     </Map>
+    <Map Include="Map_DBResp_IALRespFF.btm">
+      <TypeName>Map_DBResp_IALRespFF</TypeName>
+      <Namespace>Sp.WanHai.Orchestrations</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Content Include="Map_DBResp_IALRespFF.xsl" />
+    <Content Include="Map_DBResp_InvoiceRespFF.xsl" />
+    <Content Include="Map_DBResp_PeppolCNXml.xsl" />
     <Map Include="Map_LHDNResp_InvoiceFF.btm">
       <TypeName>Map_LHDNResp_InvoiceFF</TypeName>
       <Namespace>Sp.WanHai.Orchestrations</Namespace>
@@ -183,14 +210,8 @@
       <SubType>Task</SubType>
     </Map>
     <Content Include="Map_StagingDB_InvRespFF.xsl" />
-    <Content Include="Map_ValidationFailed_InvRespFF.xsl" />
     <Content Include="Map_WHLInvoiceFF_InsertDB.xsl" />
-    <XLang Include="Process_IALInvoiceResponse.odx">
-      <TypeName>Process_IALInvoiceResponse</TypeName>
-      <Namespace>Sp.WanHai.Orchestrations</Namespace>
-      <SubType>Task</SubType>
-    </XLang>
-    <XLang Include="Process_IALInvoice_PeppolAPI.odx">
+    <XLang Include="Process_IALInvoiceSESAMiAPI.odx">
       <TypeName>Process_IALInvoice_PeppolAPI</TypeName>
       <Namespace>Sp.WanHai.Orchestrations</Namespace>
       <SubType>Task</SubType>
@@ -205,12 +226,6 @@
       <Namespace>Sp.WanHai.Orchestrations</Namespace>
       <SubType>Task</SubType>
     </Map>
-    <Map Include="Map_DBResp_InvResponseFF.btm">
-      <TypeName>Map_DBResp_InvResponseFF</TypeName>
-      <Namespace>Sp.WanHai.Orchestrations</Namespace>
-      <SubType>Task</SubType>
-    </Map>
-    <Content Include="Map_DBResp_InvResponseFF.xsl" />
     <Content Include="Map_DBResp_PeppolInvXML.xsl" />
     <XLang Include="Process_WHLInvoiceRespSESAMiAPI.odx">
       <TypeName>Process_WHLInvoiceResponse</TypeName>

@@ -1,0 +1,593 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="702e9b7a-d448-47b3-a37c-61250c1df8fc" LowerBound="1.1" HigherBound="189.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="Sp.WanHai.Orchestrations" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="4605536e-4404-4ecb-a573-1d4d9f45a508" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_RcvWHLInvRespUUIDWHL" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="33e3bba1-6763-40e9-9e3d-44ab28c9bfb8" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="24f66d6d-8c2c-4b63-b57b-11c64cf57201" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.108">
+                    <om:Property Name="Ref" Value="Sp.WanHai.Schemas.uspInvRespUUIDWHL_TypedPolling_InterfaceWHLInvRespLHDNAPIUUIDWHL.TypedPolling" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="d17f22e1-6d7f-4b44-af25-f1e8fc2ea58f" ParentLink="Module_ServiceDeclaration" LowerBound="11.1" HigherBound="188.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Process_WHLInvoiceResponseUUID" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="VariableDeclaration" OID="c654525c-424b-4165-9239-022da68e7681" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="25.1" HigherBound="26.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="varSubmissionID" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="271c928a-e913-4119-aeb4-e2c2744c601c" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="26.1" HigherBound="27.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="varUUID" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="6c803f1d-cc9f-4225-a849-ee0b88476710" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="27.1" HigherBound="28.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="varTempXML" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="dab543cf-d480-4a9e-b39b-2618f35ccb9a" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="28.1" HigherBound="29.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="varSellerTIN" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="f7d955df-27d3-450c-a1c9-af445c82016c" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="29.1" HigherBound="30.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="Sp.WanHai.CallAPI.LHDNInvoiceAPI" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="varobjLHDNAPI" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="31207945-0570-4c8f-bc7b-8b22a23bf5c1" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="30.1" HigherBound="31.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="varLoopItem" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="74ba1ac6-b45d-4d56-8a40-98204916f862" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="31.1" HigherBound="32.1">
+                <om:Property Name="InitialValue" Value="0" />
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Int32" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="varLoopCounter" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="e2d9967c-a29b-4478-93a0-48e855a6c603" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="32.1" HigherBound="33.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="varInvoiceNo" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="4ce1b3d6-26ca-4b46-9c5e-03dd9c804f87" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="33.1" HigherBound="34.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="varExceptionmsg" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="c1af9df9-39ed-4666-b55b-6c85ba9ef564" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="34.1" HigherBound="35.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="System.Text.StringBuilder" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="varEmailBody" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="299313bd-010c-463b-a96a-ec686dc361bc" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="35.1" HigherBound="36.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="varAPIResp" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="3e75bb46-7e90-45e1-9fc0-bdee0187da80" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="36.1" HigherBound="37.1">
+                <om:Property Name="InitialValue" Value="0" />
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Int32" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="varDocCount" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="6eea0786-e7e9-4285-bc70-8eadd9d69dd0" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="37.1" HigherBound="38.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="varDocId" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="ddd8ea60-d0b3-48e9-94a9-f4beb65ee64a" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="18.1" HigherBound="19.1">
+                <om:Property Name="Type" Value="Sp.WanHai.Schemas.uspLHDNRespBulkUpd_TypedProcedure_dbo.InterfaceWHLInvLHDNRespBulkUpdResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msguspLHDNRespBulkUpdResp" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="aa31505b-87da-477b-9fed-f4d64741b72a" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="19.1" HigherBound="20.1">
+                <om:Property Name="Type" Value="Sp.WanHai.Schemas.uspLHDNRespBulkUpd_TypedProcedure_dbo.InterfaceWHLInvLHDNRespBulkUpd" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msguspLHDNRespBulkUpdReq" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="b07ba735-4099-4138-9fc9-b45537587fc4" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="20.1" HigherBound="21.1">
+                <om:Property Name="Type" Value="Sp.WanHai.Orchestrations.msgMultiErrorLogs" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgErrorLogs" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="43527d37-0255-41a2-8b87-c634f1e4fdf1" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="21.1" HigherBound="22.1">
+                <om:Property Name="Type" Value="Sp.WanHai.Orchestrations.msgMultiErrorEmails" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgErrorEmail" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="78e824e5-170b-4b45-bda4-e850a0e8f16a" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="22.1" HigherBound="23.1">
+                <om:Property Name="Type" Value="Sp.WanHai.Schemas.LHDNAPISubmissionResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgLHDNInvDetResp" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="a5175e77-4cd1-4b71-84c5-4c6ae8a607a8" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="23.1" HigherBound="24.1">
+                <om:Property Name="Type" Value="Sp.WanHai.Schemas.uspInvRespUUIDWHL_TypedPolling_InterfaceWHLInvRespLHDNAPIUUIDWHL.TypedPolling" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgPollInvoices" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="fbaf02ac-56cd-409d-9b41-eb42b29906e7" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="24.1" HigherBound="25.1">
+                <om:Property Name="Type" Value="Sp.WanHai.Schemas.uspInvRespUUIDWHL_TypedPolling_InterfaceWHLInvRespLHDNAPIUUIDWHL.TypedPollingResultSet0" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgSingleInvoice" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="1cf78802-787d-49da-ac03-b5dff8e6cb47" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="93f5b131-ac85-427a-8d99-6bf6f6d710b2" ParentLink="ServiceBody_Statement" LowerBound="40.1" HigherBound="55.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="Port_RcvWHLInvRespUUIDWHL" />
+                    <om:Property Name="MessageName" Value="msgPollInvoices" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_1" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="d3d01ff2-e264-45fe-b420-4e353177c7e4" ParentLink="ServiceBody_Statement" LowerBound="55.1" HigherBound="59.1">
+                    <om:Property Name="Expression" Value="System.Diagnostics.EventLog.WriteEntry(&quot;WHL Invoice Resp UUID Process Start&quot;,&quot;WHL Invoice Resp UUID Process Started&quot;);&#xD;&#xA;varDocCount = xpath(msgPollInvoices,&quot;count(/*[local-name()='TypedPolling' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedPolling/InterfaceWHLInvRespLHDNAPIUUIDWHL']/*[local-name()='TypedPollingResultSet0' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedPolling/InterfaceWHLInvRespLHDNAPIUUIDWHL']/*[local-name()='TypedPollingResultSet0' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedPolling/InterfaceWHLInvRespLHDNAPIUUIDWHL']/*[local-name()='LHDNSubmissionID' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedPolling/InterfaceWHLInvRespLHDNAPIUUIDWHL'])&quot;);&#xD;&#xA;System.Diagnostics.EventLog.WriteEntry(&quot;WHL Inv Resp UUID Doc Count&quot;,varDocCount.ToString());&#xD;&#xA;" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Process_Start" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="While" OID="b5279293-1cc3-4a34-bbe9-6fe643ae7ef4" ParentLink="ServiceBody_Statement" LowerBound="59.1" HigherBound="184.1">
+                    <om:Property Name="Expression" Value="varLoopCounter &lt; varDocCount" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Loop_DocumentIds" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Scope" OID="abb3d566-7534-493a-9c08-769654a6ab86" ParentLink="ComplexStatement_Statement" LowerBound="62.1" HigherBound="181.1">
+                        <om:Property Name="InitializedTransactionType" Value="True" />
+                        <om:Property Name="IsSynchronized" Value="False" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Scope_LHDNResp" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="VariableAssignment" OID="3adc565d-d07e-4b19-98da-70f5da72b25a" ParentLink="ComplexStatement_Statement" LowerBound="67.1" HigherBound="74.1">
+                            <om:Property Name="Expression" Value="varLoopCounter = varLoopCounter + 1;&#xD;&#xA;varLoopItem = varLoopCounter.ToString();&#xD;&#xA;&#xD;&#xA;varUUID = &quot;&quot;;&#xD;&#xA;varSubmissionID = &quot;&quot;;&#xD;&#xA;varSellerTIN = &quot;&quot;;" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Incr_Counter" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                        <om:Element Type="Construct" OID="b4f440d3-fca5-403a-9f09-0b57af0def38" ParentLink="ComplexStatement_Statement" LowerBound="74.1" HigherBound="84.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Const_SingleDocId" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="MessageRef" OID="04559826-4e60-4b56-b987-51b18aa1d1d1" ParentLink="Construct_MessageRef" LowerBound="75.35" HigherBound="75.51">
+                                <om:Property Name="Ref" Value="msgSingleInvoice" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="MessageAssignment" OID="e90e4736-a629-47d5-b580-c9bd950e244b" ParentLink="ComplexStatement_Statement" LowerBound="77.1" HigherBound="83.1">
+                                <om:Property Name="Expression" Value="msgSingleInvoice = xpath(msgPollInvoices, &quot;/*[local-name()='TypedPolling' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedPolling/InterfaceWHLInvRespLHDNAPIUUIDWHL']/*[local-name()='TypedPollingResultSet0' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedPolling/InterfaceWHLInvRespLHDNAPIUUIDWHL']/*[local-name()='TypedPollingResultSet0' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedPolling/InterfaceWHLInvRespLHDNAPIUUIDWHL'][&quot;+ varLoopItem +&quot;]&quot; );&#xD;&#xA;varSubmissionID = msgSingleInvoice.LHDNSubmissionID;&#xD;&#xA;varUUID = msgSingleInvoice.LHDNUUID;&#xD;&#xA;varSellerTIN = msgSingleInvoice.SellerTIN;&#xD;&#xA;&#xD;&#xA;" />
+                                <om:Property Name="ReportToAnalyst" Value="False" />
+                                <om:Property Name="Name" Value="MsgAssign_InvoiceHeaderRequest" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="VariableAssignment" OID="14cc49cf-d565-4661-8775-3c9a83a94ca2" ParentLink="ComplexStatement_Statement" LowerBound="84.1" HigherBound="97.1">
+                            <om:Property Name="Expression" Value="varAPIResp = varobjLHDNAPI.SubmitLHDNInvoice(varDocId,varSellerTIN,&quot;&quot;,&quot;UUID&quot;,varUUID);&#xD;&#xA;if(System.Convert.ToString(Sp.WanHai.Common.SSOClientHelper.Read(&quot;Sp.WanHai&quot;, &quot;ShowWHLAdminLogs&quot;)) == &quot;Yes&quot;)&#xA;{&#xA;    if(varAPIResp.Length &lt; 30000)&#xA;    {&#xA;        System.Diagnostics.EventLog.WriteEntry(&quot;APIResp&quot;,varAPIResp);&#xA;    }&#xA;    else&#xA;    {&#xA;        System.Diagnostics.EventLog.WriteEntry(&quot;APIResp&quot;,varAPIResp.Substring(0,29500));&#xA;    }&#xA;}" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Call_API_Peppol" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                        <om:Element Type="Decision" OID="1c375023-ec3d-48f6-9cd2-1a5d21c85691" ParentLink="ComplexStatement_Statement" LowerBound="97.1" HigherBound="161.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Chk_Error_API" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="DecisionBranch" OID="2513264e-2de7-4449-a54a-4218656dda4b" ParentLink="ReallyComplexStatement_Branch" LowerBound="98.25" HigherBound="101.1">
+                                <om:Property Name="Expression" Value="(varAPIResp == &quot;&quot;) || (varAPIResp.StartsWith(&quot;Error&quot;))" />
+                                <om:Property Name="IsGhostBranch" Value="True" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="If_Error" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="DecisionBranch" OID="87464fa2-3f27-4323-a8cf-8f43d30614b2" ParentLink="ReallyComplexStatement_Branch">
+                                <om:Property Name="IsGhostBranch" Value="True" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Else" />
+                                <om:Property Name="Signal" Value="False" />
+                                <om:Element Type="Construct" OID="e7d5c129-3a64-4ff9-ad75-f805d84536d9" ParentLink="ComplexStatement_Statement" LowerBound="103.1" HigherBound="120.1">
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Const_LHDNResp_Var" />
+                                    <om:Property Name="Signal" Value="True" />
+                                    <om:Element Type="MessageAssignment" OID="ed3f68a7-1c59-4d77-8776-40494d13c54e" ParentLink="ComplexStatement_Statement" LowerBound="106.1" HigherBound="119.1">
+                                        <om:Property Name="Expression" Value="&#xD;&#xA;varTempXML = new System.Xml.XmlDocument();&#xD;&#xA;varTempXML.LoadXml(varAPIResp);&#xD;&#xA;msgLHDNInvDetResp = varTempXML;&#xD;&#xA;&#xD;&#xA;//varUUID = xpath(msgLHDNInvDetResp,&quot;string(/*[local-name()='APISubmissionResponse' and namespace-uri()='']/*[local-name()='SubmissionResponses' and namespace-uri()='']/*[local-name()='uuid' and namespace-uri()='']/text())&quot;);&#xD;&#xA;//varLongId = xpath(msgLHDNInvDetResp,&quot;string(/*[local-name()='APISubmissionResponse' and namespace-uri()='']/*[local-name()='SubmissionResponses' and namespace-uri()='']/*[local-name()='longId' and namespace-uri()='']/text())&quot;);&#xD;&#xA;//varStatusCode = xpath(msgLHDNInvDetResp,&quot;string(/*[local-name()='APISubmissionResponse' and namespace-uri()='']/*[local-name()='SubmissionResponses' and namespace-uri()='']/*[local-name()='status' and namespace-uri()='']/text())&quot;);&#xD;&#xA;//varStatusMsg = xpath(msgLHDNInvDetResp,&quot;string(/*[local-name()='APISubmissionResponse' and namespace-uri()='']/*[local-name()='SubmissionResponses' and namespace-uri()='']/*[local-name()='documentStatusReason' and namespace-uri()='']/text())&quot;);&#xD;&#xA;//varValidationDateTime = xpath(msgLHDNInvDetResp,&quot;string(/*[local-name()='APISubmissionResponse' and namespace-uri()='']/*[local-name()='SubmissionResponses' and namespace-uri()='']/*[local-name()='dateTimeValidated' and namespace-uri()='']/text())&quot;);&#xD;&#xA;//varInterfaceStatus = xpath(msgLHDNInvDetResp,&quot;string(/*[local-name()='APISubmissionResponse' and namespace-uri()='']/*[local-name()='SubmissionResponses' and namespace-uri()='']/*[local-name()='status' and namespace-uri()='']/text())&quot;);&#xD;&#xA;//varLHDNAPIResp = xpath(msgLHDNInvDetResp,&quot;string(/*[local-name()='APISubmissionResponse' and namespace-uri()='']/*[local-name()='SubmissionResponses' and namespace-uri()='']/*[local-name()='documentStatusReason' and namespace-uri()='']/text())&quot;);&#xD;&#xA;" />
+                                        <om:Property Name="ReportToAnalyst" Value="False" />
+                                        <om:Property Name="Name" Value="MessageAssignment_5" />
+                                        <om:Property Name="Signal" Value="True" />
+                                    </om:Element>
+                                    <om:Element Type="MessageRef" OID="9dc23bfc-d10e-4527-a45a-f0dba405290f" ParentLink="Construct_MessageRef" LowerBound="104.39" HigherBound="104.56">
+                                        <om:Property Name="Ref" Value="msgLHDNInvDetResp" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Signal" Value="False" />
+                                    </om:Element>
+                                </om:Element>
+                                <om:Element Type="Construct" OID="a73a49a9-81ba-4d02-af22-b272bdf6c721" ParentLink="ComplexStatement_Statement" LowerBound="120.1" HigherBound="126.1">
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Const_LHDNResp_Var" />
+                                    <om:Property Name="Signal" Value="True" />
+                                    <om:Element Type="Transform" OID="bd760ca3-b7ff-42ce-ad84-ba14f3ef618d" ParentLink="ComplexStatement_Statement" LowerBound="123.1" HigherBound="125.1">
+                                        <om:Property Name="ClassName" Value="Sp.WanHai.Transforms.Map_BulkLHDNSubmissionResp_DB" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="Transform_1" />
+                                        <om:Property Name="Signal" Value="True" />
+                                        <om:Element Type="MessagePartRef" OID="4d4c3278-6548-47f0-9e4e-abaa69401af3" ParentLink="Transform_OutputMessagePartRef" LowerBound="124.44" HigherBound="124.68">
+                                            <om:Property Name="MessageRef" Value="msguspLHDNRespBulkUpdReq" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                                            <om:Property Name="Signal" Value="False" />
+                                        </om:Element>
+                                        <om:Element Type="MessagePartRef" OID="48e1d34f-836d-49ce-95fe-f99974d09d53" ParentLink="Transform_InputMessagePartRef" LowerBound="124.124" HigherBound="124.141">
+                                            <om:Property Name="MessageRef" Value="msgLHDNInvDetResp" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                                            <om:Property Name="Signal" Value="False" />
+                                        </om:Element>
+                                    </om:Element>
+                                    <om:Element Type="MessageRef" OID="179cc65f-8b44-467d-9595-8706622efc57" ParentLink="Construct_MessageRef" LowerBound="121.39" HigherBound="121.63">
+                                        <om:Property Name="Ref" Value="msguspLHDNRespBulkUpdReq" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Signal" Value="False" />
+                                    </om:Element>
+                                </om:Element>
+                                <om:Element Type="VariableAssignment" OID="9fb23a70-a7b8-4e66-8c42-be35c5b3e751" ParentLink="ComplexStatement_Statement" LowerBound="126.1" HigherBound="141.1">
+                                    <om:Property Name="Expression" Value="&#xA;if(System.Convert.ToString(Sp.WanHai.Common.SSOClientHelper.Read(&quot;Sp.WanHai&quot;, &quot;ShowWHLAdminLogs&quot;)) == &quot;Yes&quot;)&#xA;{&#xA;    varTempXML = new System.Xml.XmlDocument();&#xD;&#xA;    varTempXML = msguspLHDNRespBulkUpdReq;&#xA;    if(varTempXML.OuterXml.Length &lt; 30000)&#xA;    {&#xA;        System.Diagnostics.EventLog.WriteEntry(&quot;msguspLHDNRespBulkUpdReq&quot;,varTempXML.OuterXml);&#xA;    }&#xA;    else&#xA;    {&#xA;        System.Diagnostics.EventLog.WriteEntry(&quot;msguspLHDNRespBulkUpdReq&quot;,varTempXML.OuterXml.Substring(0,29500));&#xA;    }&#xA;}" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="PrintLogs" />
+                                    <om:Property Name="Signal" Value="True" />
+                                </om:Element>
+                                <om:Element Type="Send" OID="fa47d9fa-9489-4fd7-a43a-f82362e47daf" ParentLink="ComplexStatement_Statement" LowerBound="141.1" HigherBound="143.1">
+                                    <om:Property Name="PortName" Value="Port_SndRcvWHLInvRespBulkLHDNAPIUpd" />
+                                    <om:Property Name="MessageName" Value="msguspLHDNRespBulkUpdReq" />
+                                    <om:Property Name="OperationName" Value="Operation_1" />
+                                    <om:Property Name="OperationMessageName" Value="Request" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Send_1" />
+                                    <om:Property Name="Signal" Value="True" />
+                                </om:Element>
+                                <om:Element Type="Receive" OID="dfaedd4e-26fc-4e22-a9b6-fc5312513643" ParentLink="ComplexStatement_Statement" LowerBound="143.1" HigherBound="145.1">
+                                    <om:Property Name="Activate" Value="False" />
+                                    <om:Property Name="PortName" Value="Port_SndRcvWHLInvRespBulkLHDNAPIUpd" />
+                                    <om:Property Name="MessageName" Value="msguspLHDNRespBulkUpdResp" />
+                                    <om:Property Name="OperationName" Value="Operation_1" />
+                                    <om:Property Name="OperationMessageName" Value="Response" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Receive_2" />
+                                    <om:Property Name="Signal" Value="True" />
+                                </om:Element>
+                                <om:Element Type="VariableAssignment" OID="a9c58afc-5a0c-4926-b1b0-71c7e65bcedb" ParentLink="ComplexStatement_Statement" LowerBound="145.1" HigherBound="160.1">
+                                    <om:Property Name="Expression" Value="&#xA;if(System.Convert.ToString(Sp.WanHai.Common.SSOClientHelper.Read(&quot;Sp.WanHai&quot;, &quot;ShowWHLAdminLogs&quot;)) == &quot;Yes&quot;)&#xA;{&#xA;    varTempXML = new System.Xml.XmlDocument();&#xA;    varTempXML = msguspLHDNRespBulkUpdResp;&#xA;    if(varTempXML.OuterXml.Length &lt; 30000)&#xA;    {&#xA;        System.Diagnostics.EventLog.WriteEntry(&quot;msguspLHDNRespBulkUpdResp&quot;,varTempXML.OuterXml);&#xA;    }&#xA;    else&#xA;    {&#xA;        System.Diagnostics.EventLog.WriteEntry(&quot;msguspLHDNRespBulkUpdResp&quot;,varTempXML.OuterXml.Substring(0,29500));&#xA;    }&#xA;}" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="ShowLogs" />
+                                    <om:Property Name="Signal" Value="True" />
+                                </om:Element>
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Catch" OID="3affdc9d-0a08-4f14-9044-e145c1ff6e90" ParentLink="Scope_Catch" LowerBound="164.1" HigherBound="179.1">
+                            <om:Property Name="ExceptionName" Value="ex" />
+                            <om:Property Name="ExceptionType" Value="System.Exception" />
+                            <om:Property Name="IsFaultMessage" Value="False" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="System Exception" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="VariableAssignment" OID="bce0c9ce-e746-474c-be9f-92ce23229440" ParentLink="Catch_Statement" LowerBound="167.1" HigherBound="178.1">
+                                <om:Property Name="Expression" Value="System.Diagnostics.EventLog.WriteEntry(&quot;WHLUUIDAPIUpdateException&quot;,ex.Message);&#xD;&#xA;varExceptionmsg = ex.Message;&#xD;&#xA;varExceptionmsg = varExceptionmsg.Replace(&quot;&amp;&quot;,&quot;&amp;amp;&quot;);&#xD;&#xA;varExceptionmsg = varExceptionmsg.Replace(&quot;'&quot;,&quot;''&quot;);&#xD;&#xA;varExceptionmsg = varExceptionmsg.Replace(&quot;&lt;&quot;,&quot;&amp;lt;&quot;);&#xD;&#xA;varExceptionmsg = varExceptionmsg.Replace(&quot;&gt;&quot;,&quot;&amp;gt;&quot;);&#xD;&#xA;if(varExceptionmsg.Length &gt; 1000)&#xD;&#xA;{&#xD;&#xA;    varExceptionmsg = varExceptionmsg.Substring(0,999);&#xD;&#xA;}" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="ExceptionMsg" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="Delay" OID="042e63d0-f0c5-4da9-b242-9c82f66debfa" ParentLink="ComplexStatement_Statement" LowerBound="181.1" HigherBound="183.1">
+                        <om:Property Name="Timeout" Value="new System.TimeSpan(0,0,0,0,System.Convert.ToInt32(Sp.WanHai.Common.SSOClientHelper.Read(&quot;Sp.WanHai&quot;, &quot;WHLBulkAPIRespDelayinMS&quot;)));" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Delay_SSO" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="d7f85920-fe76-4846-891a-7d7b76f499a7" ParentLink="ServiceBody_Statement" LowerBound="184.1" HigherBound="186.1">
+                    <om:Property Name="Expression" Value="System.Diagnostics.EventLog.WriteEntry(&quot;WHL Inv Response UUID Process End&quot;,&quot;WHL Inv Response UUID Process Completed&quot;);" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Process_End" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="75f86bcd-9ac7-469e-b399-4ab585c02c9d" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="14.1" HigherBound="16.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Sp.WanHai.Orchestrations.PortType_RcvWHLInvRespUUIDWHL" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_RcvWHLInvRespUUIDWHL" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="d352ed6f-0ae3-4c20-8a4c-4e42eb5c654b" ParentLink="PortDeclaration_CLRAttribute" LowerBound="14.1" HigherBound="15.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="c066d52a-2fa5-42fa-9b8b-0e804e7af5fb" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="16.1" HigherBound="18.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="51" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Sp.WanHai.Orchestrations.PortType_SndRcvWHLInvRespBulkLHDNAPIUpd" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_SndRcvWHLInvRespBulkLHDNAPIUpd" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="6b48b1a7-606e-4827-bdeb-bf42268c4a93" ParentLink="PortDeclaration_CLRAttribute" LowerBound="16.1" HigherBound="17.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module Sp.WanHai.Orchestrations
+{
+    internal porttype PortType_RcvWHLInvRespUUIDWHL
+    {
+        oneway Operation_1
+        {
+            Sp.WanHai.Schemas.uspInvRespUUIDWHL_TypedPolling_InterfaceWHLInvRespLHDNAPIUUIDWHL.TypedPolling
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service Process_WHLInvoiceResponseUUID
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements PortType_RcvWHLInvRespUUIDWHL Port_RcvWHLInvRespUUIDWHL;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses PortType_SndRcvWHLInvRespBulkLHDNAPIUpd Port_SndRcvWHLInvRespBulkLHDNAPIUpd;
+        message Sp.WanHai.Schemas.uspLHDNRespBulkUpd_TypedProcedure_dbo.InterfaceWHLInvLHDNRespBulkUpdResponse msguspLHDNRespBulkUpdResp;
+        message Sp.WanHai.Schemas.uspLHDNRespBulkUpd_TypedProcedure_dbo.InterfaceWHLInvLHDNRespBulkUpd msguspLHDNRespBulkUpdReq;
+        message msgMultiErrorLogs msgErrorLogs;
+        message msgMultiErrorEmails msgErrorEmail;
+        message Sp.WanHai.Schemas.LHDNAPISubmissionResponse msgLHDNInvDetResp;
+        message Sp.WanHai.Schemas.uspInvRespUUIDWHL_TypedPolling_InterfaceWHLInvRespLHDNAPIUUIDWHL.TypedPolling msgPollInvoices;
+        message Sp.WanHai.Schemas.uspInvRespUUIDWHL_TypedPolling_InterfaceWHLInvRespLHDNAPIUUIDWHL.TypedPollingResultSet0 msgSingleInvoice;
+        System.String varSubmissionID;
+        System.String varUUID;
+        System.Xml.XmlDocument varTempXML;
+        System.String varSellerTIN;
+        Sp.WanHai.CallAPI.LHDNInvoiceAPI varobjLHDNAPI;
+        System.String varLoopItem;
+        System.Int32 varLoopCounter;
+        System.String varInvoiceNo;
+        System.String varExceptionmsg;
+        System.Text.StringBuilder varEmailBody;
+        System.String varAPIResp;
+        System.Int32 varDocCount;
+        System.String varDocId;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("93f5b131-ac85-427a-8d99-6bf6f6d710b2")]
+            activate receive (Port_RcvWHLInvRespUUIDWHL.Operation_1, msgPollInvoices);
+            varSubmissionID = "";
+            varUUID = "";
+            varTempXML = new System.Xml.XmlDocument();
+            varSellerTIN = "";
+            varobjLHDNAPI = new Sp.WanHai.CallAPI.LHDNInvoiceAPI();
+            varLoopItem = "";
+            varLoopCounter = 0;
+            varInvoiceNo = "";
+            varExceptionmsg = "";
+            varEmailBody = new System.Text.StringBuilder();
+            varAPIResp = "";
+            varDocCount = 0;
+            varDocId = "";
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("d3d01ff2-e264-45fe-b420-4e353177c7e4")]
+            System.Diagnostics.EventLog.WriteEntry("WHL Invoice Resp UUID Process Start","WHL Invoice Resp UUID Process Started");
+            varDocCount = xpath(msgPollInvoices,"count(/*[local-name()='TypedPolling' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedPolling/InterfaceWHLInvRespLHDNAPIUUIDWHL']/*[local-name()='TypedPollingResultSet0' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedPolling/InterfaceWHLInvRespLHDNAPIUUIDWHL']/*[local-name()='TypedPollingResultSet0' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedPolling/InterfaceWHLInvRespLHDNAPIUUIDWHL']/*[local-name()='LHDNSubmissionID' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedPolling/InterfaceWHLInvRespLHDNAPIUUIDWHL'])");
+            System.Diagnostics.EventLog.WriteEntry("WHL Inv Resp UUID Doc Count",varDocCount.ToString());
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("b5279293-1cc3-4a34-bbe9-6fe643ae7ef4")]
+            while (varLoopCounter < varDocCount)
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("abb3d566-7534-493a-9c08-769654a6ab86")]
+                scope
+                {
+                    body
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("3adc565d-d07e-4b19-98da-70f5da72b25a")]
+                        varLoopCounter = varLoopCounter + 1;
+                        varLoopItem = varLoopCounter.ToString();
+                        
+                        varUUID = "";
+                        varSubmissionID = "";
+                        varSellerTIN = "";
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("b4f440d3-fca5-403a-9f09-0b57af0def38")]
+                        construct msgSingleInvoice
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("e90e4736-a629-47d5-b580-c9bd950e244b")]
+                            msgSingleInvoice = xpath(msgPollInvoices, "/*[local-name()='TypedPolling' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedPolling/InterfaceWHLInvRespLHDNAPIUUIDWHL']/*[local-name()='TypedPollingResultSet0' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedPolling/InterfaceWHLInvRespLHDNAPIUUIDWHL']/*[local-name()='TypedPollingResultSet0' and namespace-uri()='http://schemas.microsoft.com/Sql/2008/05/TypedPolling/InterfaceWHLInvRespLHDNAPIUUIDWHL']["+ varLoopItem +"]" );
+                            varSubmissionID = msgSingleInvoice.LHDNSubmissionID;
+                            varUUID = msgSingleInvoice.LHDNUUID;
+                            varSellerTIN = msgSingleInvoice.SellerTIN;
+                            
+                        }
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("14cc49cf-d565-4661-8775-3c9a83a94ca2")]
+                        varAPIResp = varobjLHDNAPI.SubmitLHDNInvoice(varDocId,varSellerTIN,"","UUID",varUUID);
+                        if(System.Convert.ToString(Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "ShowWHLAdminLogs")) == "Yes")
+                        {
+                            if(varAPIResp.Length < 30000)
+                            {
+                                System.Diagnostics.EventLog.WriteEntry("APIResp",varAPIResp);
+                            }
+                            else
+                            {
+                                System.Diagnostics.EventLog.WriteEntry("APIResp",varAPIResp.Substring(0,29500));
+                            }
+                        }
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("1c375023-ec3d-48f6-9cd2-1a5d21c85691")]
+                        if ((varAPIResp == "") || (varAPIResp.StartsWith("Error")))
+                        {
+                        }
+                        else 
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("e7d5c129-3a64-4ff9-ad75-f805d84536d9")]
+                            construct msgLHDNInvDetResp
+                            {
+                                [Microsoft.XLANGs.BaseTypes.DesignerPosition("ed3f68a7-1c59-4d77-8776-40494d13c54e")]
+                                
+                                varTempXML = new System.Xml.XmlDocument();
+                                varTempXML.LoadXml(varAPIResp);
+                                msgLHDNInvDetResp = varTempXML;
+                                
+                                //varUUID = xpath(msgLHDNInvDetResp,"string(/*[local-name()='APISubmissionResponse' and namespace-uri()='']/*[local-name()='SubmissionResponses' and namespace-uri()='']/*[local-name()='uuid' and namespace-uri()='']/text())");
+                                //varLongId = xpath(msgLHDNInvDetResp,"string(/*[local-name()='APISubmissionResponse' and namespace-uri()='']/*[local-name()='SubmissionResponses' and namespace-uri()='']/*[local-name()='longId' and namespace-uri()='']/text())");
+                                //varStatusCode = xpath(msgLHDNInvDetResp,"string(/*[local-name()='APISubmissionResponse' and namespace-uri()='']/*[local-name()='SubmissionResponses' and namespace-uri()='']/*[local-name()='status' and namespace-uri()='']/text())");
+                                //varStatusMsg = xpath(msgLHDNInvDetResp,"string(/*[local-name()='APISubmissionResponse' and namespace-uri()='']/*[local-name()='SubmissionResponses' and namespace-uri()='']/*[local-name()='documentStatusReason' and namespace-uri()='']/text())");
+                                //varValidationDateTime = xpath(msgLHDNInvDetResp,"string(/*[local-name()='APISubmissionResponse' and namespace-uri()='']/*[local-name()='SubmissionResponses' and namespace-uri()='']/*[local-name()='dateTimeValidated' and namespace-uri()='']/text())");
+                                //varInterfaceStatus = xpath(msgLHDNInvDetResp,"string(/*[local-name()='APISubmissionResponse' and namespace-uri()='']/*[local-name()='SubmissionResponses' and namespace-uri()='']/*[local-name()='status' and namespace-uri()='']/text())");
+                                //varLHDNAPIResp = xpath(msgLHDNInvDetResp,"string(/*[local-name()='APISubmissionResponse' and namespace-uri()='']/*[local-name()='SubmissionResponses' and namespace-uri()='']/*[local-name()='documentStatusReason' and namespace-uri()='']/text())");
+                            }
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("a73a49a9-81ba-4d02-af22-b272bdf6c721")]
+                            construct msguspLHDNRespBulkUpdReq
+                            {
+                                [Microsoft.XLANGs.BaseTypes.DesignerPosition("bd760ca3-b7ff-42ce-ad84-ba14f3ef618d")]
+                                transform (msguspLHDNRespBulkUpdReq) = Sp.WanHai.Transforms.Map_BulkLHDNSubmissionResp_DB (msgLHDNInvDetResp);
+                            }
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("9fb23a70-a7b8-4e66-8c42-be35c5b3e751")]
+                            
+                            if(System.Convert.ToString(Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "ShowWHLAdminLogs")) == "Yes")
+                            {
+                                varTempXML = new System.Xml.XmlDocument();
+                                varTempXML = msguspLHDNRespBulkUpdReq;
+                                if(varTempXML.OuterXml.Length < 30000)
+                                {
+                                    System.Diagnostics.EventLog.WriteEntry("msguspLHDNRespBulkUpdReq",varTempXML.OuterXml);
+                                }
+                                else
+                                {
+                                    System.Diagnostics.EventLog.WriteEntry("msguspLHDNRespBulkUpdReq",varTempXML.OuterXml.Substring(0,29500));
+                                }
+                            }
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("fa47d9fa-9489-4fd7-a43a-f82362e47daf")]
+                            send (Port_SndRcvWHLInvRespBulkLHDNAPIUpd.Operation_1, msguspLHDNRespBulkUpdReq);
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("dfaedd4e-26fc-4e22-a9b6-fc5312513643")]
+                            receive (Port_SndRcvWHLInvRespBulkLHDNAPIUpd.Operation_1, msguspLHDNRespBulkUpdResp);
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("a9c58afc-5a0c-4926-b1b0-71c7e65bcedb")]
+                            
+                            if(System.Convert.ToString(Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "ShowWHLAdminLogs")) == "Yes")
+                            {
+                                varTempXML = new System.Xml.XmlDocument();
+                                varTempXML = msguspLHDNRespBulkUpdResp;
+                                if(varTempXML.OuterXml.Length < 30000)
+                                {
+                                    System.Diagnostics.EventLog.WriteEntry("msguspLHDNRespBulkUpdResp",varTempXML.OuterXml);
+                                }
+                                else
+                                {
+                                    System.Diagnostics.EventLog.WriteEntry("msguspLHDNRespBulkUpdResp",varTempXML.OuterXml.Substring(0,29500));
+                                }
+                            }
+                        }
+                    }
+                    exceptions
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("3affdc9d-0a08-4f14-9044-e145c1ff6e90")]
+                        catch (System.Exception ex)
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("bce0c9ce-e746-474c-be9f-92ce23229440")]
+                            System.Diagnostics.EventLog.WriteEntry("WHLUUIDAPIUpdateException",ex.Message);
+                            varExceptionmsg = ex.Message;
+                            varExceptionmsg = varExceptionmsg.Replace("&","&amp;");
+                            varExceptionmsg = varExceptionmsg.Replace("'","''");
+                            varExceptionmsg = varExceptionmsg.Replace("<","&lt;");
+                            varExceptionmsg = varExceptionmsg.Replace(">","&gt;");
+                            if(varExceptionmsg.Length > 1000)
+                            {
+                                varExceptionmsg = varExceptionmsg.Substring(0,999);
+                            }
+                        }
+                    }
+                }
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("042e63d0-f0c5-4da9-b242-9c82f66debfa")]
+                delay new System.TimeSpan(0,0,0,0,System.Convert.ToInt32(Sp.WanHai.Common.SSOClientHelper.Read("Sp.WanHai", "WHLBulkAPIRespDelayinMS")));
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("d7f85920-fe76-4846-891a-7d7b76f499a7")]
+            System.Diagnostics.EventLog.WriteEntry("WHL Inv Response UUID Process End","WHL Inv Response UUID Process Completed");
+        }
+    }
+}
+

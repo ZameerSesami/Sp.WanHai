@@ -94,6 +94,7 @@
       <Namespace>Sp.WanHai.Transforms</Namespace>
       <SubType>Task</SubType>
     </Map>
+    <Content Include="Map_BulkLHDNSubmissionResp_DB.xsl" />
     <Content Include="Map_LHDNAPIResp_DB.xsl" />
     <Map Include="Map_LHDNAPIResp_DB.btm">
       <TypeName>Map_LHDNAPIResp_DB</TypeName>

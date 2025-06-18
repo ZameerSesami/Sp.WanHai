@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <BindingInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Assembly="Microsoft.BizTalk.Deployment, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Version="3.5.1.0" BindingStatus="NoBindings" BoundEndpoints="0" TotalEndpoints="0">
-  <Timestamp>2025-02-24T13:42:22.3448358+08:00</Timestamp>
+  <Timestamp>2025-06-18T00:44:14.0476933+08:00</Timestamp>
   <ModuleRefCollection />
   <SendPortCollection>
     <SendPort Name="WcfSendPort_SqlAdapterBinding_TypedProcedures_dbo_Custom" IsStatic="true" IsTwoWay="true" BindingOption="0" AnalyticsEnabled="false">
@@ -13,7 +13,7 @@
   &lt;BindingType vt="8"&gt;sqlBinding&lt;/BindingType&gt;
   &lt;BindingConfiguration vt="8"&gt;&amp;lt;binding name="SqlAdapterBinding" receiveTimeout="Infinite" maxConnectionPoolSize="100" encrypt="false" workstationId="" useAmbientTransaction="false" batchSize="20" ApplicationIntent="ReadWrite" MultiSubnetFailover="true" ApplicationName="" ColumnEncryptionSetting="Disabled" polledDataAvailableStatement="" pollingStatement="" pollingIntervalInSeconds="30" pollWhileDataFound="false" pollingSqlReceiveTimeout="00:10:00" notificationStatement="" notifyOnListenerStart="true" enableBizTalkCompatibilityMode="true" chunkSize="4194304" inboundOperationType="Polling" useDatabaseNameInXsdNamespace="false" allowIdentityInsert="false" acceptCredentialsInUri="false" enablePerformanceCounters="false" xmlStoredProcedureRootNodeName="" xmlStoredProcedureRootNodeNamespace="" /&amp;gt;&lt;/BindingConfiguration&gt;
   &lt;StaticAction vt="8"&gt;&amp;lt;BtsActionMapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&amp;gt;
-  &amp;lt;Operation Name="InterfaceLHDNInvRespWHL" Action="TypedProcedure/dbo/InterfaceLHDNInvRespWHL" /&amp;gt;
+  &amp;lt;Operation Name="InterfaceWHLInvoiceStatus" Action="TypedProcedure/dbo/InterfaceWHLInvoiceStatus" /&amp;gt;
 &amp;lt;/BtsActionMapping&amp;gt;&lt;/StaticAction&gt;
   &lt;UseSSO vt="11"&gt;0&lt;/UseSSO&gt;
   &lt;InboundBodyLocation vt="8"&gt;UseBodyElement&lt;/InboundBodyLocation&gt;

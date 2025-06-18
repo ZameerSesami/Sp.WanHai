@@ -73,6 +73,51 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Schema Include="uspWHLPeppolDBStatus_ProcedureResultSet.dbo.InterfaceWHLInvoiceStatus.xsd">
+      <TypeName>uspWHLPeppolDBStatus_ProcedureResultSet_dbo_InterfaceWHLInvoiceStatus</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspWHLPeppolDBStatus_TypedProcedure.dbo.xsd">
+      <TypeName>uspWHLPeppolDBStatus_TypedProcedure_dbo</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspInvRespUUIDWHL_TypedPolling.InterfaceWHLInvRespLHDNAPIUUIDWHL.xsd">
+      <TypeName>uspInvRespUUIDWHL_TypedPolling_InterfaceWHLInvRespLHDNAPIUUIDWHL</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspPollInvRespBulkLHDNAPI_TypedPolling.InterfaceWHLInvoiceRespBulkLHDNAPIIAL.xsd">
+      <TypeName>uspPollInvRespBulkLHDNAPI_TypedPolling_InterfaceWHLInvoiceRespBulkLHDNAPIIAL</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspIALInvoiceBulkLHDNAPI_TypedPolling.InterfaceWHLInvoiceBulkLHDNAPIIAL.xsd">
+      <TypeName>uspIALInvoiceBulkLHDNAPI_TypedPolling_InterfaceWHLInvoiceBulkLHDNAPIIAL</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspPollIALInvRespData_TypedPolling.InterfaceWHLInvoiceResponseDataIAL.xsd">
+      <TypeName>uspPollIALInvRespData_TypedPolling_InterfaceWHLInvoiceResponseDataIAL</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspInvRespSESAMiAPIIAL_TypedPolling.InterfaceWHLInvoiceRespSESAMiAPIIAL.xsd">
+      <TypeName>uspInvRespSESAMiAPIIAL_TypedPolling_InterfaceWHLInvoiceRespSESAMiAPIIAL</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspPollInvSESAMiApiIAL_TypedPolling.InterfaceWHLInvoiceSESAMiAPIIAL.xsd">
+      <TypeName>uspPollInvSESAMiApiIAL_TypedPolling_InterfaceWHLInvoiceSESAMiAPIIAL</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="uspPollWHLInvRespData_TypedPolling.InterfaceWHLInvoiceResponseDataWHL.xsd">
+      <TypeName>uspPollWHLInvRespData_TypedPolling_InterfaceWHLInvoiceResponseDataWHL</TypeName>
+      <Namespace>Sp.WanHai.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
     <Schema Include="uspPollWHLPeppolData_TypedPolling.InterfaceWHLPeppolDBUpdDataWHL.xsd">
       <TypeName>uspPollWHLPeppolData_TypedPolling_InterfaceWHLPeppolDBUpdDataWHL</TypeName>
       <Namespace>Sp.WanHai.Schemas</Namespace>
@@ -88,18 +133,8 @@
       <Namespace>Sp.WanHai.Schemas</Namespace>
       <SubType>Task</SubType>
     </Schema>
-    <Schema Include="uspInvRespLHDNAPI_TypedPolling.InterfaceWHLInvoiceRespLHDNAPIWHL.xsd">
-      <TypeName>uspInvRespLHDNAPI_TypedPolling_InterfaceWHLInvoiceRespLHDNAPIWHL</TypeName>
-      <Namespace>Sp.WanHai.Schemas</Namespace>
-      <SubType>Task</SubType>
-    </Schema>
     <Schema Include="uspInvRespSESAMiAPI_TypedPolling.InterfaceWHLInvoiceRespSESAMiAPIWHL.xsd">
       <TypeName>uspInvRespSESAMiAPI_TypedPolling_InterfaceWHLInvoiceRespSESAMiAPIWHL</TypeName>
-      <Namespace>Sp.WanHai.Schemas</Namespace>
-      <SubType>Task</SubType>
-    </Schema>
-    <Schema Include="uspPollInvoiceLHDNAPI_TypedPolling.InterfaceWHLInvoiceLHDNAPIWHL.xsd">
-      <TypeName>uspPollInvoiceLHDNAPI_TypedPolling_InterfaceWHLInvoiceLHDNAPIWHL</TypeName>
       <Namespace>Sp.WanHai.Schemas</Namespace>
       <SubType>Task</SubType>
     </Schema>
@@ -165,21 +200,6 @@
     </Schema>
     <Schema Include="uspPollPeppolSentIAL_TypedPolling.InterfacePeppolSentWHLInvoicesIAL.xsd">
       <TypeName>uspPollPeppolSentIAL_TypedPolling_InterfacePeppolSentWHLInvoicesIAL</TypeName>
-      <Namespace>Sp.WanHai.Schemas</Namespace>
-      <SubType>Task</SubType>
-    </Schema>
-    <Schema Include="uspPollInvoicesIAL_TypedPolling.InterfaceWHLInvoicesPollingIAL.xsd">
-      <TypeName>uspPollInvoicesIAL_TypedPolling_InterfaceWHLInvoicesPollingIAL</TypeName>
-      <Namespace>Sp.WanHai.Schemas</Namespace>
-      <SubType>Task</SubType>
-    </Schema>
-    <Schema Include="uspWHLInvPeppolDBStatus_ProcedureResultSet.dbo.InterfaceWHLInvoiceStatus.xsd">
-      <TypeName>uspWHLInvPeppolDBStatus_ProcedureResultSet_dbo_InterfaceWHLInvoiceStatus</TypeName>
-      <Namespace>Sp.WanHai.Schemas</Namespace>
-      <SubType>Task</SubType>
-    </Schema>
-    <Schema Include="uspWHLInvPeppolDBStatus_TypedProcedure.dbo.xsd">
-      <TypeName>uspWHLInvPeppolDBStatus_TypedProcedure_dbo</TypeName>
       <Namespace>Sp.WanHai.Schemas</Namespace>
       <SubType>Task</SubType>
     </Schema>
@@ -326,15 +346,8 @@
     <None Include="spwanhaikey.snk" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="WcfReceivePort_SqlAdapterBinding_Custom.bindinginfo.xml" />
-    <Content Include="WcfReceivePort_SqlAdapterBinding_Custom.bindinginfo7.xml" />
-    <Content Include="WcfReceivePort_SqlAdapterBinding_Custom.bindinginfo8.xml" />
-    <Content Include="WcfReceivePort_SqlAdapterBinding_Custom.bindinginfo9.xml" />
     <Content Include="WcfSendPort_SqlAdapterBinding_Custom.bindinginfo.xml" />
     <Content Include="WcfSendPort_SqlAdapterBinding_Custom.bindinginfo1.xml" />
-    <Content Include="WcfSendPort_SqlAdapterBinding_Custom.bindinginfo2.xml" />
-    <Content Include="WcfSendPort_SqlAdapterBinding_Custom.bindinginfo3.xml" />
-    <Content Include="WcfSendPort_SqlAdapterBinding_Custom.bindinginfo4.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\BizTalk\BizTalkC.targets" />
