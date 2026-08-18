@@ -2,7 +2,7 @@
 #error Do not define __DESIGNER_DATA.
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
-    <om:Element Type="Module" OID="beed60d4-d85d-4114-a1e9-f91fc381a2b8" LowerBound="1.1" HigherBound="117.1">
+    <om:Element Type="Module" OID="beed60d4-d85d-4114-a1e9-f91fc381a2b8" LowerBound="1.1" HigherBound="116.1">
         <om:Property Name="ReportToAnalyst" Value="True" />
         <om:Property Name="Name" Value="Sp.WanHai.Orchestrations" />
         <om:Property Name="Signal" Value="False" />
@@ -50,14 +50,14 @@
                 </om:Element>
             </om:Element>
         </om:Element>
-        <om:Element Type="ServiceDeclaration" OID="735da7fc-ee44-4407-b7d6-d1491d55cfb3" ParentLink="Module_ServiceDeclaration" LowerBound="18.1" HigherBound="116.1">
+        <om:Element Type="ServiceDeclaration" OID="735da7fc-ee44-4407-b7d6-d1491d55cfb3" ParentLink="Module_ServiceDeclaration" LowerBound="18.1" HigherBound="115.1">
             <om:Property Name="InitializedTransactionType" Value="True" />
             <om:Property Name="IsInvokable" Value="False" />
             <om:Property Name="TypeModifier" Value="Internal" />
             <om:Property Name="ReportToAnalyst" Value="True" />
             <om:Property Name="Name" Value="Process_WHLInvoiceFFToDB" />
             <om:Property Name="Signal" Value="True" />
-            <om:Element Type="VariableDeclaration" OID="bc3b258f-e6f5-4075-b06b-91bf3643ed8f" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="30.1" HigherBound="31.1">
+            <om:Element Type="VariableDeclaration" OID="bc3b258f-e6f5-4075-b06b-91bf3643ed8f" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="29.1" HigherBound="30.1">
                 <om:Property Name="UseDefaultConstructor" Value="False" />
                 <om:Property Name="Type" Value="System.String" />
                 <om:Property Name="ParamDirection" Value="In" />
@@ -65,7 +65,7 @@
                 <om:Property Name="Name" Value="varFileName" />
                 <om:Property Name="Signal" Value="True" />
             </om:Element>
-            <om:Element Type="VariableDeclaration" OID="7cd750b0-3644-4dd5-a0ee-e48b5619e526" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="31.1" HigherBound="32.1">
+            <om:Element Type="VariableDeclaration" OID="7cd750b0-3644-4dd5-a0ee-e48b5619e526" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="30.1" HigherBound="31.1">
                 <om:Property Name="UseDefaultConstructor" Value="False" />
                 <om:Property Name="Type" Value="System.String" />
                 <om:Property Name="ParamDirection" Value="In" />
@@ -73,7 +73,7 @@
                 <om:Property Name="Name" Value="varExceptionmsg" />
                 <om:Property Name="Signal" Value="True" />
             </om:Element>
-            <om:Element Type="VariableDeclaration" OID="e7567413-6c9b-4f33-9fcd-44a5ee34fdf4" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="32.1" HigherBound="33.1">
+            <om:Element Type="VariableDeclaration" OID="e7567413-6c9b-4f33-9fcd-44a5ee34fdf4" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="31.1" HigherBound="32.1">
                 <om:Property Name="UseDefaultConstructor" Value="True" />
                 <om:Property Name="Type" Value="System.Text.StringBuilder" />
                 <om:Property Name="ParamDirection" Value="In" />
@@ -81,7 +81,7 @@
                 <om:Property Name="Name" Value="varEmailBody" />
                 <om:Property Name="Signal" Value="True" />
             </om:Element>
-            <om:Element Type="VariableDeclaration" OID="aa74a70f-37e8-4ce8-96c2-ef482f0b9a95" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="33.1" HigherBound="34.1">
+            <om:Element Type="VariableDeclaration" OID="aa74a70f-37e8-4ce8-96c2-ef482f0b9a95" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="32.1" HigherBound="33.1">
                 <om:Property Name="UseDefaultConstructor" Value="True" />
                 <om:Property Name="Type" Value="System.Xml.XmlDocument" />
                 <om:Property Name="ParamDirection" Value="In" />
@@ -89,7 +89,7 @@
                 <om:Property Name="Name" Value="varTempXML" />
                 <om:Property Name="Signal" Value="True" />
             </om:Element>
-            <om:Element Type="VariableDeclaration" OID="68b9aa60-f5dd-4cf2-9209-459c05e708bc" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="34.1" HigherBound="35.1">
+            <om:Element Type="VariableDeclaration" OID="68b9aa60-f5dd-4cf2-9209-459c05e708bc" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="33.1" HigherBound="34.1">
                 <om:Property Name="UseDefaultConstructor" Value="False" />
                 <om:Property Name="Type" Value="System.Int32" />
                 <om:Property Name="ParamDirection" Value="In" />
@@ -104,28 +104,21 @@
                 <om:Property Name="Name" Value="msgInvoiceFF" />
                 <om:Property Name="Signal" Value="True" />
             </om:Element>
-            <om:Element Type="MessageDeclaration" OID="26ae5f64-e8d1-4353-a73e-8acd771b27ef" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="26.1" HigherBound="27.1">
-                <om:Property Name="Type" Value="Sp.WanHai.Schemas.InvoiceSingleFF" />
-                <om:Property Name="ParamDirection" Value="In" />
-                <om:Property Name="ReportToAnalyst" Value="True" />
-                <om:Property Name="Name" Value="msgInvoiceSingle" />
-                <om:Property Name="Signal" Value="True" />
-            </om:Element>
-            <om:Element Type="MessageDeclaration" OID="382a9344-d6d5-403d-abb2-3674695aa3f8" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="27.1" HigherBound="28.1">
+            <om:Element Type="MessageDeclaration" OID="382a9344-d6d5-403d-abb2-3674695aa3f8" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="26.1" HigherBound="27.1">
                 <om:Property Name="Type" Value="Sp.WanHai.Schemas.uspInvInsert_TypedProcedure_dbo.InterfaceInvoiceInsert" />
                 <om:Property Name="ParamDirection" Value="In" />
                 <om:Property Name="ReportToAnalyst" Value="True" />
                 <om:Property Name="Name" Value="msguspReq" />
                 <om:Property Name="Signal" Value="True" />
             </om:Element>
-            <om:Element Type="MessageDeclaration" OID="262c9dc9-b00a-418f-987d-199ffb36845a" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="28.1" HigherBound="29.1">
+            <om:Element Type="MessageDeclaration" OID="262c9dc9-b00a-418f-987d-199ffb36845a" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="27.1" HigherBound="28.1">
                 <om:Property Name="Type" Value="Sp.WanHai.Schemas.uspInvInsert_TypedProcedure_dbo.InterfaceInvoiceInsertResponse" />
                 <om:Property Name="ParamDirection" Value="In" />
                 <om:Property Name="ReportToAnalyst" Value="True" />
                 <om:Property Name="Name" Value="msguspResp" />
                 <om:Property Name="Signal" Value="True" />
             </om:Element>
-            <om:Element Type="MessageDeclaration" OID="0e9f8319-a2e3-4e90-934a-e1ee80d30f6b" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="29.1" HigherBound="30.1">
+            <om:Element Type="MessageDeclaration" OID="0e9f8319-a2e3-4e90-934a-e1ee80d30f6b" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="28.1" HigherBound="29.1">
                 <om:Property Name="Type" Value="Sp.WanHai.Schemas.SSOValues" />
                 <om:Property Name="ParamDirection" Value="In" />
                 <om:Property Name="ReportToAnalyst" Value="True" />
@@ -134,7 +127,7 @@
             </om:Element>
             <om:Element Type="ServiceBody" OID="97b3f3db-65e6-4d54-a3c4-c075919de630" ParentLink="ServiceDeclaration_ServiceBody">
                 <om:Property Name="Signal" Value="False" />
-                <om:Element Type="Receive" OID="dc1e1015-1212-4f7e-bba1-1a1cc82df6c3" ParentLink="ServiceBody_Statement" LowerBound="37.1" HigherBound="43.1">
+                <om:Element Type="Receive" OID="dc1e1015-1212-4f7e-bba1-1a1cc82df6c3" ParentLink="ServiceBody_Statement" LowerBound="36.1" HigherBound="42.1">
                     <om:Property Name="Activate" Value="True" />
                     <om:Property Name="PortName" Value="Port_RcvWHLInvoiceFF" />
                     <om:Property Name="MessageName" Value="msgInvoiceFF" />
@@ -144,81 +137,81 @@
                     <om:Property Name="Name" Value="Receive_1" />
                     <om:Property Name="Signal" Value="True" />
                 </om:Element>
-                <om:Element Type="VariableAssignment" OID="227a846c-918b-44fa-9194-0a9ba65b9ae1" ParentLink="ServiceBody_Statement" LowerBound="43.1" HigherBound="48.1">
+                <om:Element Type="VariableAssignment" OID="227a846c-918b-44fa-9194-0a9ba65b9ae1" ParentLink="ServiceBody_Statement" LowerBound="42.1" HigherBound="47.1">
                     <om:Property Name="Expression" Value="System.Diagnostics.EventLog.WriteEntry(&quot;WHL InvoiceFF Process Start&quot;,&quot;WHL InvoiceFF Process Started&quot;);&#xD;&#xA;varFileName = msgInvoiceFF(FILE.ReceivedFileName);&#xD;&#xA;varFileName = System.IO.Path.GetFileName(varFileName);&#xD;&#xA;System.Diagnostics.EventLog.WriteEntry(&quot;FileName&quot;,varFileName);" />
                     <om:Property Name="ReportToAnalyst" Value="True" />
                     <om:Property Name="Name" Value="Process_Start" />
                     <om:Property Name="Signal" Value="True" />
                 </om:Element>
-                <om:Element Type="Scope" OID="5de63f4b-5316-4a44-9ad2-f23aad3ebd7a" ParentLink="ServiceBody_Statement" LowerBound="48.1" HigherBound="112.1">
+                <om:Element Type="Scope" OID="5de63f4b-5316-4a44-9ad2-f23aad3ebd7a" ParentLink="ServiceBody_Statement" LowerBound="47.1" HigherBound="111.1">
                     <om:Property Name="InitializedTransactionType" Value="True" />
                     <om:Property Name="IsSynchronized" Value="False" />
                     <om:Property Name="ReportToAnalyst" Value="True" />
                     <om:Property Name="Name" Value="Scope_1" />
                     <om:Property Name="Signal" Value="True" />
-                    <om:Element Type="Construct" OID="f401362c-b96c-4708-bdcf-0ce89980a1a7" ParentLink="ComplexStatement_Statement" LowerBound="53.1" HigherBound="61.1">
+                    <om:Element Type="Construct" OID="f401362c-b96c-4708-bdcf-0ce89980a1a7" ParentLink="ComplexStatement_Statement" LowerBound="52.1" HigherBound="60.1">
                         <om:Property Name="ReportToAnalyst" Value="True" />
                         <om:Property Name="Name" Value="Const_SSO" />
                         <om:Property Name="Signal" Value="True" />
-                        <om:Element Type="MessageAssignment" OID="f996b6ef-f0b2-4102-aa2b-a74e67da7b3b" ParentLink="ComplexStatement_Statement" LowerBound="56.1" HigherBound="60.1">
+                        <om:Element Type="MessageAssignment" OID="f996b6ef-f0b2-4102-aa2b-a74e67da7b3b" ParentLink="ComplexStatement_Statement" LowerBound="55.1" HigherBound="59.1">
                             <om:Property Name="Expression" Value="varTempXML = new System.Xml.XmlDocument();&#xD;&#xA;varTempXML.LoadXml(&quot;&lt;Root&gt;&lt;PeppolIdType&gt;&quot; + varFileName + &quot;&lt;/PeppolIdType&gt;&lt;HubID&gt;WHL&lt;/HubID&gt;&lt;/Root&gt;&quot;);&#xD;&#xA;msgSSOValues = varTempXML;" />
                             <om:Property Name="ReportToAnalyst" Value="False" />
                             <om:Property Name="Name" Value="MessageAssignment_1" />
                             <om:Property Name="Signal" Value="True" />
                         </om:Element>
-                        <om:Element Type="MessageRef" OID="b60c87c9-699a-4868-8e10-41c1727839c5" ParentLink="Construct_MessageRef" LowerBound="54.31" HigherBound="54.43">
+                        <om:Element Type="MessageRef" OID="b60c87c9-699a-4868-8e10-41c1727839c5" ParentLink="Construct_MessageRef" LowerBound="53.31" HigherBound="53.43">
                             <om:Property Name="Ref" Value="msgSSOValues" />
                             <om:Property Name="ReportToAnalyst" Value="True" />
                             <om:Property Name="Signal" Value="False" />
                         </om:Element>
                     </om:Element>
-                    <om:Element Type="Construct" OID="678dc585-34b5-4cfc-b29a-caa0085c8cc2" ParentLink="ComplexStatement_Statement" LowerBound="61.1" HigherBound="67.1">
+                    <om:Element Type="Construct" OID="678dc585-34b5-4cfc-b29a-caa0085c8cc2" ParentLink="ComplexStatement_Statement" LowerBound="60.1" HigherBound="66.1">
                         <om:Property Name="ReportToAnalyst" Value="True" />
                         <om:Property Name="Name" Value="Const_uspReq" />
                         <om:Property Name="Signal" Value="True" />
-                        <om:Element Type="Transform" OID="a2f49079-d4e0-4f3e-8209-77d45c0ca95d" ParentLink="ComplexStatement_Statement" LowerBound="64.1" HigherBound="66.1">
+                        <om:Element Type="Transform" OID="a2f49079-d4e0-4f3e-8209-77d45c0ca95d" ParentLink="ComplexStatement_Statement" LowerBound="63.1" HigherBound="65.1">
                             <om:Property Name="ClassName" Value="Sp.WanHai.Orchestrations.Map_WHLInvoiceFF_InsertDB" />
                             <om:Property Name="ReportToAnalyst" Value="True" />
                             <om:Property Name="Name" Value="Transform_2" />
                             <om:Property Name="Signal" Value="True" />
-                            <om:Element Type="MessagePartRef" OID="4ab8758c-d6eb-40e7-8589-3c077d27080c" ParentLink="Transform_InputMessagePartRef" LowerBound="65.101" HigherBound="65.113">
+                            <om:Element Type="MessagePartRef" OID="4ab8758c-d6eb-40e7-8589-3c077d27080c" ParentLink="Transform_InputMessagePartRef" LowerBound="64.101" HigherBound="64.113">
                                 <om:Property Name="MessageRef" Value="msgInvoiceFF" />
                                 <om:Property Name="ReportToAnalyst" Value="True" />
                                 <om:Property Name="Name" Value="MessagePartReference_3" />
                                 <om:Property Name="Signal" Value="False" />
                             </om:Element>
-                            <om:Element Type="MessagePartRef" OID="2f9f8f9a-4520-437a-b4c7-fa55e61a4f98" ParentLink="Transform_InputMessagePartRef" LowerBound="65.115" HigherBound="65.127">
+                            <om:Element Type="MessagePartRef" OID="2f9f8f9a-4520-437a-b4c7-fa55e61a4f98" ParentLink="Transform_InputMessagePartRef" LowerBound="64.115" HigherBound="64.127">
                                 <om:Property Name="MessageRef" Value="msgSSOValues" />
                                 <om:Property Name="ReportToAnalyst" Value="True" />
                                 <om:Property Name="Name" Value="MessagePartReference_4" />
                                 <om:Property Name="Signal" Value="False" />
                             </om:Element>
-                            <om:Element Type="MessagePartRef" OID="cc3a1be9-8383-4b91-868f-684058f9d861" ParentLink="Transform_OutputMessagePartRef" LowerBound="65.36" HigherBound="65.45">
+                            <om:Element Type="MessagePartRef" OID="cc3a1be9-8383-4b91-868f-684058f9d861" ParentLink="Transform_OutputMessagePartRef" LowerBound="64.36" HigherBound="64.45">
                                 <om:Property Name="MessageRef" Value="msguspReq" />
                                 <om:Property Name="ReportToAnalyst" Value="True" />
                                 <om:Property Name="Name" Value="MessagePartReference_5" />
                                 <om:Property Name="Signal" Value="False" />
                             </om:Element>
                         </om:Element>
-                        <om:Element Type="MessageRef" OID="e02801f1-1fe9-4325-a859-b9e81dd11617" ParentLink="Construct_MessageRef" LowerBound="62.31" HigherBound="62.40">
+                        <om:Element Type="MessageRef" OID="e02801f1-1fe9-4325-a859-b9e81dd11617" ParentLink="Construct_MessageRef" LowerBound="61.31" HigherBound="61.40">
                             <om:Property Name="Ref" Value="msguspReq" />
                             <om:Property Name="ReportToAnalyst" Value="True" />
                             <om:Property Name="Signal" Value="False" />
                         </om:Element>
                     </om:Element>
-                    <om:Element Type="VariableAssignment" OID="9e5e1107-dde8-4431-8f17-7ed7a6c04dbc" ParentLink="ComplexStatement_Statement" LowerBound="67.1" HigherBound="81.1">
+                    <om:Element Type="VariableAssignment" OID="9e5e1107-dde8-4431-8f17-7ed7a6c04dbc" ParentLink="ComplexStatement_Statement" LowerBound="66.1" HigherBound="80.1">
                         <om:Property Name="Expression" Value="if(System.Convert.ToString(Sp.WanHai.Common.SSOClientHelper.Read(&quot;Sp.Wanhai&quot;, &quot;ShowWHLAdminLogs&quot;)) == &quot;Yes&quot;)&#xA;{&#xA;    varTempXML= new System.Xml.XmlDocument();&#xD;&#xA;    varTempXML = msguspReq;&#xD;&#xA;    if(varTempXML.OuterXml.Length &lt; 30000)&#xA;    {&#xA;        System.Diagnostics.EventLog.WriteEntry(&quot;msguspReq&quot;,varTempXML.OuterXml);&#xA;    }&#xA;    else&#xA;    {&#xA;        System.Diagnostics.EventLog.WriteEntry(&quot;msguspReq&quot;,varTempXML.OuterXml.Substring(0,29500));&#xA;    }&#xD;&#xA;}" />
                         <om:Property Name="ReportToAnalyst" Value="True" />
                         <om:Property Name="Name" Value="Print_Logs" />
                         <om:Property Name="Signal" Value="False" />
                     </om:Element>
-                    <om:Element Type="VariableAssignment" OID="b916fd4f-662f-4f89-a1a4-b16911a7f1ed" ParentLink="ComplexStatement_Statement" LowerBound="81.1" HigherBound="97.1">
+                    <om:Element Type="VariableAssignment" OID="b916fd4f-662f-4f89-a1a4-b16911a7f1ed" ParentLink="ComplexStatement_Statement" LowerBound="80.1" HigherBound="96.1">
                         <om:Property Name="Expression" Value="varTempXML = msgInvoiceFF;&#xD;&#xA;//System.Diagnostics.EventLog.WriteEntry(&quot;msgInvoiceFF&quot;,varTempXML.OuterXml);&#xD;&#xA;&#xD;&#xA;//variable of type - Microsoft.XLANGs.Pipeline.ReceivePipelineOutputMessages&#xD;&#xA;//varReceivePipelineOutput= Microsoft.XLANGs.Pipeline.XLANGPipelineManager.ExecuteReceivePipeline(typeof(Sp.WanHai.Pipelines.RcvWHLInvoiceFFCopy),msgInvoiceFF);&#xD;&#xA;&#xD;&#xA;//add this statemetn in the loop condition&#xD;&#xA;//varReceivePipelineOutput.MoveNext()&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;//varCount = msgInvoiceFF(BTS.InterchangeSequenceNumber);&#xD;&#xA;&#xD;&#xA;//varCount = System.Convert.ToInt32(xpath(msgInvoiceFF,&quot;count(/*[local-name()='InvoiceFF' and namespace-uri()='http://Sp.WanHai.Schemas.InvoiceFF']/*[local-name()='InvoiceHeader' and namespace-uri()='']/*[local-name()='InvoiceNumber' and namespace-uri()='']/text())&quot;));&#xD;&#xA;//System.Diagnostics.EventLog.WriteEntry(&quot;varCount&quot;,varCount.ToString());" />
                         <om:Property Name="ReportToAnalyst" Value="True" />
                         <om:Property Name="Name" Value="Call_Pipeline" />
                         <om:Property Name="Signal" Value="True" />
                     </om:Element>
-                    <om:Element Type="Send" OID="d40f97fc-f2f8-4756-82d6-dc25f9da5f05" ParentLink="ComplexStatement_Statement" LowerBound="97.1" HigherBound="99.1">
+                    <om:Element Type="Send" OID="d40f97fc-f2f8-4756-82d6-dc25f9da5f05" ParentLink="ComplexStatement_Statement" LowerBound="96.1" HigherBound="98.1">
                         <om:Property Name="PortName" Value="Port_SndRcvWHLInvoiceFFDB" />
                         <om:Property Name="MessageName" Value="msguspReq" />
                         <om:Property Name="OperationName" Value="Operation_1" />
@@ -227,7 +220,7 @@
                         <om:Property Name="Name" Value="Send_2" />
                         <om:Property Name="Signal" Value="True" />
                     </om:Element>
-                    <om:Element Type="Receive" OID="2873b678-b4a4-4419-b846-9b97c3849ce0" ParentLink="ComplexStatement_Statement" LowerBound="99.1" HigherBound="101.1">
+                    <om:Element Type="Receive" OID="2873b678-b4a4-4419-b846-9b97c3849ce0" ParentLink="ComplexStatement_Statement" LowerBound="98.1" HigherBound="100.1">
                         <om:Property Name="Activate" Value="False" />
                         <om:Property Name="PortName" Value="Port_SndRcvWHLInvoiceFFDB" />
                         <om:Property Name="MessageName" Value="msguspResp" />
@@ -237,14 +230,14 @@
                         <om:Property Name="Name" Value="Receive_2" />
                         <om:Property Name="Signal" Value="True" />
                     </om:Element>
-                    <om:Element Type="Catch" OID="9a15bb3b-13ef-4a76-ae20-41d85593764e" ParentLink="Scope_Catch" LowerBound="104.1" HigherBound="110.1">
+                    <om:Element Type="Catch" OID="9a15bb3b-13ef-4a76-ae20-41d85593764e" ParentLink="Scope_Catch" LowerBound="103.1" HigherBound="109.1">
                         <om:Property Name="ExceptionName" Value="ex" />
                         <om:Property Name="ExceptionType" Value="System.Exception" />
                         <om:Property Name="IsFaultMessage" Value="False" />
                         <om:Property Name="ReportToAnalyst" Value="True" />
                         <om:Property Name="Name" Value="ex" />
                         <om:Property Name="Signal" Value="True" />
-                        <om:Element Type="VariableAssignment" OID="82e7d43b-5abf-4871-86fa-16824517f164" ParentLink="Catch_Statement" LowerBound="107.1" HigherBound="109.1">
+                        <om:Element Type="VariableAssignment" OID="82e7d43b-5abf-4871-86fa-16824517f164" ParentLink="Catch_Statement" LowerBound="106.1" HigherBound="108.1">
                             <om:Property Name="Expression" Value="System.Diagnostics.EventLog.WriteEntry(&quot;WHLInvoiceFFtoDBException&quot;,ex.Message);" />
                             <om:Property Name="ReportToAnalyst" Value="True" />
                             <om:Property Name="Name" Value="Expression_1" />
@@ -252,7 +245,7 @@
                         </om:Element>
                     </om:Element>
                 </om:Element>
-                <om:Element Type="VariableAssignment" OID="8b2d1f07-5dfe-4e37-9ebd-a8dcb41a69e8" ParentLink="ServiceBody_Statement" LowerBound="112.1" HigherBound="114.1">
+                <om:Element Type="VariableAssignment" OID="8b2d1f07-5dfe-4e37-9ebd-a8dcb41a69e8" ParentLink="ServiceBody_Statement" LowerBound="111.1" HigherBound="113.1">
                     <om:Property Name="Expression" Value="System.Diagnostics.EventLog.WriteEntry(&quot;WHL InvoiceFF_DB Process End&quot;,&quot;WHL InvoiceFF_DB Process Completed&quot;);" />
                     <om:Property Name="ReportToAnalyst" Value="True" />
                     <om:Property Name="Name" Value="Process_End" />
@@ -320,7 +313,6 @@ module Sp.WanHai.Orchestrations
         [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
         port uses PortType_SndRcvWHLInvoiceFFDB Port_SndRcvWHLInvoiceFFDB;
         message Sp.WanHai.Schemas.InvoiceFF msgInvoiceFF;
-        message Sp.WanHai.Schemas.InvoiceSingleFF msgInvoiceSingle;
         message Sp.WanHai.Schemas.uspInvInsert_TypedProcedure_dbo.InterfaceInvoiceInsert msguspReq;
         message Sp.WanHai.Schemas.uspInvInsert_TypedProcedure_dbo.InterfaceInvoiceInsertResponse msguspResp;
         message Sp.WanHai.Schemas.SSOValues msgSSOValues;

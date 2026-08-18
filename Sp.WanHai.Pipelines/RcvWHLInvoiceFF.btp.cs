@@ -53,7 +53,7 @@ namespace Sp.WanHai.Pipelines
 "Occurs=\"0\" maxOccurs=\"-1\" execMethod=\"All\" stageId=\"9d0e410e-4cce-4536-83fa-4a5040674ad6\" />      <C"+
 "omponents />    </Stage>  </Stages></Document>";
         
-        private const string _versionDependentGuid = "4ac5a739-37f9-41f4-9990-bbcf540afde6";
+        private const string _versionDependentGuid = "93271946-8802-4bdf-afc9-b761bf4825c5";
         
         public RcvWHLInvoiceFF()
         {

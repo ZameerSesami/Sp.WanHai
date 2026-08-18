@@ -45,20 +45,25 @@ namespace Sp.WanHai.CallAPI
                     LHDNInvSubmissionDetURL = Sp.WanHai.Common.SSOClientHelper.Read("Sp.Wanhai", "LHDNInvSubmissionDetURL_Prod");
                 }
                 var token = GetLHDNToken(SupplierTIN);
+                if (token.StartsWith("Error"))
+                {
+                    return token;
+                }
+
                 //strtoken = token.access_token;
                 if (APIType == "Submit")
                 {
-                    var apiresp = ProcessLHDNData(token.access_token, SupplierTIN, InvoiceNo, InvoiceXMLreq);
+                    var apiresp = ProcessLHDNData(token, SupplierTIN, InvoiceNo, InvoiceXMLreq);
                     return apiresp;
                 }
                 else if (APIType == "SubmissionID")
                 {
-                    var apiresp = GetSubmissionData(token.access_token, SupplierTIN, InvoiceNo, UUID);
+                    var apiresp = GetSubmissionData(token, SupplierTIN, InvoiceNo, UUID);
                     return apiresp;
                 }
                 else
                 {
-                    var Invresp = GetLHDNInvoiceDetails(token.access_token, SupplierTIN, InvoiceNo, UUID);
+                    var Invresp = GetLHDNInvoiceDetails(token, SupplierTIN, InvoiceNo, UUID);
                     return Invresp;
                 }
                 //return "OK" + token;
@@ -70,7 +75,6 @@ namespace Sp.WanHai.CallAPI
         }
         public string SubmitLHDNInvoiceBulk(string InvoiceRefNo, string SupplierTIN, string InvoiceBulkXML, string APIType, string UUID)
         {
-            string strtoken = "";
             try
             {
                 if (UseProdAPI == "Yes")
@@ -89,22 +93,25 @@ namespace Sp.WanHai.CallAPI
                 }
 
                 var token = GetLHDNToken(SupplierTIN);
-                strtoken = token.access_token;
+                if (token.StartsWith("Error"))
+                {
+                    return token;
+                }
                 if (APIType == "Submit")
                 {
-                    var apiresp = ProcessLHDNDataBulk(token.access_token, SupplierTIN, InvoiceRefNo, InvoiceBulkXML);
+                    var apiresp = ProcessLHDNDataBulk(token, SupplierTIN, InvoiceRefNo, InvoiceBulkXML);
                     return apiresp;
                 }
                 else
                 {
-                    var Invresp = GetLHDNInvoiceDetails(strtoken, SupplierTIN, InvoiceRefNo, UUID);
+                    var Invresp = GetLHDNInvoiceDetails(token, SupplierTIN, InvoiceRefNo, UUID);
                     return Invresp;
                 }
                 //return "OK" + token;
             }
             catch (Exception ex)
             {
-                return "Error:" + ex.Message + "Token: " + strtoken;
+                return "Error: " + ex.ToString();
             }
         }
         public string ProcessLHDNData(string LHDNToken, string SupplierTIN, string InvoiceNo, string InvoiceXMLreq)
@@ -587,44 +594,53 @@ namespace Sp.WanHai.CallAPI
             }
         }
 
-        public LHDNTokenResponse GetLHDNToken(string SupplierTIN)
+        public string GetLHDNToken(string SupplierTIN)
         {
-            //Root jsonObject = new Root();
-            using (var client = new HttpClient())
+            try
             {
-                var headerreq = new List<KeyValuePair<string, string>>();
-                if (UseProdAPI == "Yes")
+                //Root jsonObject = new Root();
+                using (var client = new HttpClient())
                 {
-                    headerreq.Add(new KeyValuePair<string, string>("grant_type", grant_type));
-                    headerreq.Add(new KeyValuePair<string, string>("client_id", client_id_Prod));
-                    headerreq.Add(new KeyValuePair<string, string>("client_secret", client_secret_Prod));
-                    headerreq.Add(new KeyValuePair<string, string>("scope", scope));
+                    var headerreq = new List<KeyValuePair<string, string>>();
+                    if (UseProdAPI == "Yes")
+                    {
+                        headerreq.Add(new KeyValuePair<string, string>("grant_type", grant_type));
+                        headerreq.Add(new KeyValuePair<string, string>("client_id", client_id_Prod));
+                        headerreq.Add(new KeyValuePair<string, string>("client_secret", client_secret_Prod));
+                        headerreq.Add(new KeyValuePair<string, string>("scope", scope));
+                    }
+                    else
+                    {
+                        headerreq.Add(new KeyValuePair<string, string>("grant_type", grant_type));
+                        headerreq.Add(new KeyValuePair<string, string>("client_id", client_id));
+                        headerreq.Add(new KeyValuePair<string, string>("client_secret", client_secret));
+                        headerreq.Add(new KeyValuePair<string, string>("scope", scope));
+                    }
+
+
+                    HttpContent content = new FormUrlEncodedContent(headerreq);
+                    content.Headers.ContentType = new MediaTypeHeaderValue("application/x-www-form-urlencoded");
+                    //System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
+                    client.BaseAddress = new Uri(LHDNAPITokenURL);
+                    client.DefaultRequestHeaders.Add("onbehalfof", SupplierTIN);
+
+                    ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3;
+                    ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
+                    ServicePointManager.ServerCertificateValidationCallback = (snder, cert, chain, error) => true;
+
+                    System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12 | SecurityProtocolType.Ssl3;
+                    var responseResult = client.PostAsync(LHDNAPITokenURL, content).Result;
+
+                    return Newtonsoft.Json.JsonConvert.DeserializeObject<LHDNTokenResponse>(responseResult.Content.ReadAsStringAsync().Result).access_token;
+                    //return responseResult.Content.ReadAsStringAsync().Result;
                 }
-                else
-                {
-                    headerreq.Add(new KeyValuePair<string, string>("grant_type", grant_type));
-                    headerreq.Add(new KeyValuePair<string, string>("client_id", client_id));
-                    headerreq.Add(new KeyValuePair<string, string>("client_secret", client_secret));
-                    headerreq.Add(new KeyValuePair<string, string>("scope", scope));
-                }
-
-
-                HttpContent content = new FormUrlEncodedContent(headerreq);
-                content.Headers.ContentType = new MediaTypeHeaderValue("application/x-www-form-urlencoded");
-                //System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
-                client.BaseAddress = new Uri(LHDNAPITokenURL);
-                client.DefaultRequestHeaders.Add("onbehalfof", SupplierTIN);
-
-                ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3;
-                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
-                ServicePointManager.ServerCertificateValidationCallback = (snder, cert, chain, error) => true;
-
-                System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12 | SecurityProtocolType.Ssl3;
-                var responseResult = client.PostAsync(LHDNAPITokenURL, content).Result;
-
-                return Newtonsoft.Json.JsonConvert.DeserializeObject<LHDNTokenResponse>(responseResult.Content.ReadAsStringAsync().Result);
-                //return responseResult.Content.ReadAsStringAsync().Result;
             }
+            catch (Exception ex)
+            {
+                return "Error: " + ex.ToString();
+            }
+
+
         }
     }
 }
